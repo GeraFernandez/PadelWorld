@@ -297,9 +297,6 @@ body{
   gap: 10px; 
 }
 
-
-
-
 .funciones-jugador .card{
   background-color: white; 
   display: grid;
@@ -345,72 +342,32 @@ body{
   font-weight: bolder;
 }
 
-#card-jugadores .funciones-jugador .circle-icon{
-  grid-row: 1/3;
-  margin: auto;
-} 
-#card-jugadores .funciones-jugador .circle-icon {
-  grid-row: 1/3;
-  margin: auto;
-} 
-
-
-/* caja funciones jugadores */
-.contenido-jugadores {
-  margin: 5px ;
-  height: 210px;
-  border-radius: 20px;
-  overflow-y: scroll; 
-  overflow-x: hidden; 
-}
-
-/* SCROLLBAR*/
-.contenido-jugadores::-webkit-scrollbar {
-  height: 100%;
-  width: 8px; 
-  background-color: #f1f1f1; 
-}
-
-.contenido-jugadores::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px; 
-}
-
-.contenido-jugadores::-webkit-scrollbar-thumb:hover {
-  background-color: #555; 
-}
-
-.list-group-item.list-group-item-action:hover {
-  background-color: red;
-  color: white;
-}
-
- /* seccion HABILIDADES*/
+/* seccion HABILIDADES*/
    
         
- .contenedor-habilidades {
-  margin-top: 20px;
-  background: linear-gradient(to bottom, rgba(206, 7, 7, 0.9), rgba(194, 10, 10, 0.53)), url("/img/habilidades.jpg");
+#habilidades {
+  background: linear-gradient( #eb5a5acc, rgba(33, 16, 16, 0.8)), url("/img/A.PNG");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
   background-position: center center;
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
+  margin-top: 15px;
 }
 
-.contenedor-habilidades .habilidades {
+#habilidades .skills {
   max-width: 600px;
   margin: 30px auto;
 }
 
-.contenedor-habilidades .habilidades .info {
+#habilidades .skills .info {
   display: flex;
   justify-content: space-between;
 }
 
-.contenedor-habilidades .habilidades .lista {
+#habilidades .skills .lista {
   display: inline-block;
   margin-right: 20px;
   height: 10px;
@@ -418,35 +375,35 @@ body{
   background-color: #fff;
 }
 
-.contenedor-habilidades .habilidades .barra {
+#habilidades .skills .barra {
   background-color: #919191;
   width: 100%;
   height: 6px;
   margin: 10px 0px;
 }
 
-.contenedor-habilidades .habilidades .barra .barra-progreso1 {
+#habilidades .skills .barra .barra-progreso1 {
   background-color: #fff;
   width: 95%;
   height: 6px;
   animation: progreso1 2s forwards;
 }
 
-.contenedor-habilidades .habilidades .barra .barra-progreso2 {
+#habilidades .skills .barra .barra-progreso2 {
   background-color: #fff;
   width: 90%;
   height: 6px;
   animation: progreso2 2s forwards;
 }
 
-.contenedor-habilidades .habilidades .barra .barra-progreso3 {
+#habilidades .skills .barra .barra-progreso3 {
   background-color: #fff;
   width: 90%;
   height: 6px;
   animation: progreso3 2s forwards;
 }
 
-.contenedor-habilidades .habilidades .barra .barra-progreso4 {
+#habilidades .skills .barra .barra-progreso4 {
   background-color: #fff;
   width: 85%;
   height: 6px;
@@ -488,6 +445,14 @@ body{
       width: 85%;
   }
 }
+
+
+#menu-jugadores{
+  max-width: 1200px;
+  margin:  20px auto 100px auto;
+  display:flex;
+}
+ 
 
 
 

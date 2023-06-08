@@ -159,21 +159,15 @@
 
 
 <!-- seccion funciones  -->
+<!-- LLENAR CON CONTENIDO DIRIGIDO AL JUGADOR Y NO INFO GRAL COMO EL INDEX -->
 
 <section class="funciones-jugador">
   <div class="card main">
     <div class="circle-icon">
       <i class="bi bi-person"></i>
     </div> 
-    <div class="info"></div>
-  </div>
-
-  <div class="card">
-    <div class="circle-icon">
-      <i class="bi bi-person"></i>
-    </div> 
     <div class="info">
-      <h3 class="title">asda</h3>
+      <h3 class="title">Historial, estadisticas y amigos</h3>
       <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda earum minus modi molestiae rem odit natus architecto cupiditate rerum?</p>
       <a class="link" href="">VER MAS</a>
     </div>
@@ -183,63 +177,138 @@
     <div class="circle-icon">
       <i class="bi bi-person"></i>
     </div> 
-    <div class="info"></div>
+    <div class="info">
+      <h3 class="title">CLASES</h3>
+      <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda earum minus modi molestiae rem odit natus architecto cupiditate rerum?</p>
+      <a class="link" href="">VER MAS</a>
+    </div>
   </div>
 
   <div class="card">
     <div class="circle-icon">
       <i class="bi bi-person"></i>
     </div> 
-    <div class="info"></div>
+    <div class="info">
+      <h3 class="title">RIVALES</h3>
+      <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda earum minus modi molestiae rem odit natus architecto cupiditate rerum?</p>
+      <a class="link" href="">VER MAS</a>
+    </div>
   </div>
 
+ 
   <div class="card">
     <div class="circle-icon">
       <i class="bi bi-person"></i>
     </div> 
-    <div class="info"></div>
+    <div class="info">
+      <h3 class="title">TORNEOS</h3>
+      <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda earum minus modi molestiae rem odit natus architecto cupiditate rerum?</p>
+      <a class="link" href="">VER MAS</a>
+    </div>
+  </div>
+
+  
+  <div class="card">
+    <div class="circle-icon">
+      <i class="bi bi-person"></i>
+    </div> 
+    <div class="info">
+      <h3 class="title">TIENDAS</h3>
+      <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda earum minus modi molestiae rem odit natus architecto cupiditate rerum?</p>
+      <a class="link" href="">VER MAS</a>
+    </div>
   </div>
 </section>
 
 
+<!-- SECCION HABILIDADES -->
+<div id="habilidades">
+  <h3>HABILIDADES </h3>
+
+      <div class="skills">
+      <div class="info">
+          <p> <span class="lista"> </span>Saque</p>
+          <span class="porcentaje">75%</span>
+      </div>
+
+      <div class="barra">
+          <div class="" id="html"></div>
+      </div>
+  </div>
+  <div class="skills">
+      <div class="info">
+          <p> <span class="lista"> </span>Reves</p>
+          <span class="porcentaje">60%</span>
+      </div>
+
+      <div class="barra">
+          <div class="" id="js"></div>
+      </div>
+  </div>
+  <div class="skills">
+      <div class="info">
+          <p> <span class="lista"> </span>Derecha</p>
+          <span class="porcentaje">90%</span>
+      </div>
+
+      <div class="barra">
+          <div class="" id="bd"></div>
+      </div>
+  </div>
+  <div class="skills">
+      <div class="info">
+          <p> <span class="lista"> </span>Volea</p>
+          <span class="porcentaje">85%</span>
+      </div>
+
+      <div class="barra">
+          <div class="" id="c#"></div>
+      </div>
+  </div>
+</div>
 
 
 
 <!-- menu jugodores -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-12">
-      <div class="list-group" id="menu">
-        <a href="#" class="list-group-item list-group-item-action active">Mis reservas</a>
-        <a href="#" class="list-group-item list-group-item-action">Mis torneos</a>
-        <a href="#" class="list-group-item list-group-item-action">Mis clases</a>
-        <a href="#" class="list-group-item list-group-item-action">Historial</a>
-        <a href="#" class="list-group-item list-group-item-action">Amigos</a>
-        <a href="#" class="list-group-item list-group-item-action">Metodos de pago</a>
+<section id="menu-jugadores">
+  <div class="titulos">
+        <a class="item" href="#misreservas" onclick="seleccionar(this)">MIS RESERVAS</a>
+        <a class="item" href="#mistorneos" onclick="seleccionar(this)">MIS TORNEOS</a>
+        <a class="item" href="#misclases" onclick="seleccionar(this)">MIS CLASES</a>
+        <a class="item" href="#amigos" onclick="seleccionar(this)">AMIGOS</a>
+        <a class="item" href="#pagos" onclick="seleccionar(this)">METODOS DE PAGO</a>
       </div>
     </div>
-    <div class="col-lg-8 col-md-12 bg-white">
-      <div id="opcion1" class="d-none">
-       Mis reservas
-      </div>
-      <div id="opcion2" class="d-none">
-       Mis torneos
-      </div>
-      <div id="opcion3" class="d-none">
-        Mis clases
-      </div>
-      <div id="opcion4" class="d-none">
-       Historial
-      </div>
-      <div id="opcion5" class="d-none">
-        Metodos de pago
-      </div>
-      <div id="opcion6" class="d-none">
-        Metodos de pago
-      </div>
+
+    <div class="contenido">
+  
+  <section id="misreservas">
+    <h3>MIS RESERVAS</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+  </section>
+
+  <section id="mistorneos">
+    <h3>MIS TORNEOS</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+  </section>
+
+  <section id="misclases">
+    <h3>MIS CLASES</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+  </section>
+
+  <section id="amigos">
+    <h3>AMIGOS</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+  </section>
+
+  <section id="pagos">
+    <h3>METODOS DE PAGO</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+  </section>
     </div>
   </div>
-</div>
+</section>
 
 
 
