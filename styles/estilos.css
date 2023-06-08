@@ -23,6 +23,7 @@ body{
     top: 0;
     width: 100%;
     z-index: 9999;
+    background-color:#040738 ;
   }
   .navbar-nav .nav-link:hover {/* modif ver porque no funciona */
     color: red;
@@ -38,7 +39,7 @@ body{
   .caja-busqueda {
     background-color: #f2f2f2;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 20px;
   }
 
@@ -48,8 +49,6 @@ body{
     color: #fff;
     text-align: center;
     padding: 5px 0;
-
-  
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -67,79 +66,106 @@ footer a {
 .footer-parrafo{
     display: inline-block;
 }
-
-
-
   
  /* ----------------------------------------------INDEX--------------------------------------------------- */ 
-/* INDEX - seccion funcionalidades */
+
+ .carousel-title {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 20px ;
+ }
+
+
+ /* INDEX - seccion funcionalidades */
  #funcionalidades {
     padding: 15px 15px;
     text-align: center;
     background-color: #f3f3f3;
-   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)), url("/img/fondo-padel.jpg");
-
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)), url("/img/fondo-padel.jpg");
     background-size: cover;
     background-position: center center;
-    
-   
 }
 
 #funcionalidades .fila {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1450px;
-    margin: 20px auto;
-  
+  display: flex;
+  justify-content: space-between;
+  max-width: 1450px;
+  margin: 20px auto; 
 }
+
 #funcionalidades .fila .funcionalidades {
-    width: 300px;
-    background-color: #fff;
-    padding: 25px;
+  width: 300px;
+  background-color: #fff;
+  padding: 25px;
     margin-top:  10px;
     margin-left: 10px ;
     border-radius: 5px;
     transition: .5s;
+    display: flex;
+    flex-direction: column;
+  text-align: center;
+  align-items: center; 
 }
 #funcionalidades .fila .funcionalidades:hover {
-    box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
+  box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
+  background-color:rgba(0, 0, 255, 0.632);
+  color: white  ;
+  cursor: pointer;
 }
+
 #funcionalidades .fila .funcionalidades h4 {
-    font-size: 22px;
-    margin-bottom: 25px;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.circle-icon {
+  width: 120px; 
+  height: 120px;
+  border-radius: 50%; 
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-icon .bi{
+  color:rgba(0, 0, 255, 0.632); 
+  font-size: 50px;
+  
 }
 #funcionalidades .fila .funcionalidades hr {
-    width: 30%;
-    margin: auto;
-    color: #000;
-    margin-bottom: 25px;
+  width: 30%;
+  margin: auto;
+  color: #000;
+  margin-bottom: 25px;
 }
 #funcionalidades .fila .funcionalidades ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
 }
 #funcionalidades .fila .funcionalidades p {
-    font-size: 14px;
-    line-height: 22px;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 22px;
 }
+
 
 
 /* INDEX - seccion CONTACTO */
 #contacto {
-    padding: 100px 15px;
-    background-color: #f3f3f3;
+  padding: 100px 15px;
+  background-color: #f3f3f3;
 }
 #contacto .titulo-seccion {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 #contacto .contenedor-form {
-    max-width: 1100px;
-    margin: auto;
+  max-width: 1100px;
+  margin: auto;
 }
 #contacto .contenedor-form .fila {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 #contacto .contenedor-form .mitad {
     display: flex;
@@ -154,10 +180,23 @@ footer a {
 }
 #contacto .contenedor-form .mitad input {
     width: 48%;
+    
 }
 #contacto .contenedor-form .input-full {
     width: 100%;
 }
+
+
+.input-mitad:hover, .input-full:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.input-mitad:focus, .input-full:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+  border: 2px solid red;
+}
+
 #contacto .titulo-seccion {
     text-align: center;
     font-size: 22px;
@@ -181,32 +220,14 @@ footer a {
 
 
 
-
-
 /*---------------------------- PAGINA LOGIN------------------------------------- */
 .background-image {
-    background-image: url('/img/asdasdads.jpg');
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.363),  rgba(5, 4, 56, 0.662)), url("/img/fondo-login.png");
+    background-size: cover;
+    
   }
   
-  #radius-shape-1 {
-    height: 220px;
-    width: 220px;
-    top: -60px;
-    left: -130px;
-    background: radial-gradient(#cf0606, red);
-    overflow: hidden;
-  }
-
-  #radius-shape-2 {
-    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-    bottom: -60px;
-    right: -110px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(#cf0606, red);
-    overflow: hidden;
-  }
-
+ 
   .bg-glass {
     background-color: hsla(0, 0%, 100%, 0.9) !important;
     backdrop-filter: saturate(200%) blur(25px);
@@ -215,9 +236,6 @@ footer a {
     color: hsl(218, 81%, 85%)
 }
       
-
-
-
 body{
     background:#eee;
 }
@@ -225,193 +243,478 @@ body{
 
 /*---------------------------- PAGINA JUGADORES----------------------------------- */
 
+/* jugadores - cabecera */
+#jugador-offline{
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-jugadores.png");
+  background-size: cover;
+  height: 400px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#jugador-offline .title{
+  color: white;
+  margin-top: 100px;
+  font-size: 25px;
+}
+
+#jugador-offline .acceso-login{
+  margin-top: 80px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#jugador-offline .acceso-login .login{
+ color: rgb(15, 198, 15);
+ font-size: 20px;
+ text-decoration: none;
+}   
+
+#jugador-offline .acceso-login .login:hover{
+  color: red  
+}   
+
 .body-jugadores{
-    background-image: linear-gradient(to bottom, #00aaff, #ff002b);
+  background-color: gainsboro;
+}
 
+/* JUGADORES - tarjetas */
+
+.funciones-jugador{
+  width: 1100px; 
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
 }
 
 
-/* JUGADORES -tarjetas */
-.card{
-    border:none;
-    position:relative;
-    overflow:hidden;
-    border-radius:1px;
-    cursor:pointer;
+
+
+.funciones-jugador .card{
+  background-color: white; 
+  display: grid;
+  grid-template-columns: 150px auto ;
+  grid-template-rows: 200px auto ; 
+  border-radius: 20px;
+ 
 }
 
-.card:before{
-    
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    width:4px;
-    height:100%;
-    background-color:#d4a1a1;
-    transform:scaleY(1);
-    transition:all 0.5s;
-    transform-origin: bottom
+.funciones-jugador .card.main{
+  grid-column: 1/3;
+} 
+
+.funciones-jugador .card:hover {
+  background-color: blue; 
+  box-shadow: 5px 5px 10px #080808, -5px -5px 10px #8a8a8a;
+  color: white;
+  transition: background-color 0.3s, box-shadow 1s;
 }
 
-.card:after{
-    
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    width:4px;
-    height:100%;
-    background-color:red;
-    transform:scaleY(0);
-    transition:all 0.5s;
-    transform-origin: bottom
+.funciones-jugador .info{
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr  ;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.card:hover::after{
-    transform:scaleY(1);
+.funciones-jugador .info .title{
+  margin-top:auto;
+  margin-bottom: 10px;
+  font-size: 20px;
+ 
+}
+.funciones-jugador .info .parrafo{
+  margin-right: 25px;
+  font-size: 15px;
 }
 
-
-.fonts{
-    font-size:11px;
+.funciones-jugador .info .link{
+  margin-right:50px;
+  margin-left: auto;
+  color: red;
+  font-weight: bolder;
 }
 
-.social-list{
-    display:flex;
-    list-style:none;
-    justify-content:center;
-    padding:0;
+#card-jugadores .funciones-jugador .circle-icon{
+  grid-row: 1/3;
+  margin: auto;
+} 
+#card-jugadores .funciones-jugador .circle-icon {
+  grid-row: 1/3;
+  margin: auto;
+} 
+
+
+/* caja funciones jugadores */
+.contenido-jugadores {
+  margin: 5px ;
+  height: 210px;
+  border-radius: 20px;
+  overflow-y: scroll; 
+  overflow-x: hidden; 
 }
 
-.social-list li{
-    padding:10px;
-    color:blue;
-    font-size: 19px;
+/* SCROLLBAR*/
+.contenido-jugadores::-webkit-scrollbar {
+  height: 100%;
+  width: 8px; 
+  background-color: #f1f1f1; 
 }
 
-
-.buttons button:nth-child(1){
-       border:1px solid red!important;
-       color:#db6767;
-       height:40px;
+.contenido-jugadores::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px; 
 }
 
-.buttons button:nth-child(1):hover{
-       border:1px solid red !important;
-       color:#fff;
-       height:40px;
-       background-color:red;
+.contenido-jugadores::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
 }
 
-.buttons button:nth-child(2){
-       border:1px solid red !important;
-       background-color:red;
-       color:#fff;
-        height:40px;
+.list-group-item.list-group-item-action:hover {
+  background-color: red;
+  color: white;
+}
+
+ /* seccion HABILIDADES*/
+   
+        
+ .contenedor-habilidades {
+  margin-top: 20px;
+  background: linear-gradient(to bottom, rgba(206, 7, 7, 0.9), rgba(194, 10, 10, 0.53)), url("/img/habilidades.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  background-position: center center;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contenedor-habilidades .habilidades {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.contenedor-habilidades .habilidades .info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-habilidades .habilidades .lista {
+  display: inline-block;
+  margin-right: 20px;
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+}
+
+.contenedor-habilidades .habilidades .barra {
+  background-color: #919191;
+  width: 100%;
+  height: 6px;
+  margin: 10px 0px;
+}
+
+.contenedor-habilidades .habilidades .barra .barra-progreso1 {
+  background-color: #fff;
+  width: 95%;
+  height: 6px;
+  animation: progreso1 2s forwards;
+}
+
+.contenedor-habilidades .habilidades .barra .barra-progreso2 {
+  background-color: #fff;
+  width: 90%;
+  height: 6px;
+  animation: progreso2 2s forwards;
+}
+
+.contenedor-habilidades .habilidades .barra .barra-progreso3 {
+  background-color: #fff;
+  width: 90%;
+  height: 6px;
+  animation: progreso3 2s forwards;
+}
+
+.contenedor-habilidades .habilidades .barra .barra-progreso4 {
+  background-color: #fff;
+  width: 85%;
+  height: 6px;
+  animation: progreso4 2s forwards;
+}
+
+@keyframes progreso1 {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@keyframes progreso2 {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 60%;
+  }
+}
+
+@keyframes progreso3 {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 90%;
+  }
+}
+
+@keyframes progreso4 {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 85%;
+  }
 }
 
 
 
 /* ---------------------------------------------PAGINA CLUBES------------------------------------- */
 
+/* CLUBES - cabecera */
+#club-offline{
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-club.jpg");
+  background-size: cover;
+  height: 400px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-/* Estilos para la versión oscura del calendario */
-.calendar-container {
-    background-color: #202124;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 350px;
-  }
-  
-  .calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #3a3b3c;
-  }
-  
-  .calendar-header .month-prev,
-  .calendar-header .month-next,
-  .calendar-header .year-prev,
-  .calendar-header .year-next {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    background-size: 12px 12px;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-  
-  .calendar-header .month-prev {
-    background-image: url('https://i.imgur.com/2ffnLl7.png');
-  }
-  
-  .calendar-header .month-next {
-    background-image: url('https://i.imgur.com/1xL8M6W.png');
-  }
-  
-  .calendar-header .year-prev {
-    background-image: url('https://i.imgur.com/2ffnLl7.png');
-    transform: rotate(90deg);
-  }
-  
-  .calendar-header .year-next {
-    background-image: url('https://i.imgur.com/1xL8M6W.png');
-    transform: rotate(90deg);
-  }
-  
-  .calendar-header .calendar-title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .calendar-body {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-  }
-  
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-  }
-  
-  .calendar-day {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    width: calc(100% / 7);
-    height: 40px;
-    background-color: #3a3b3c;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .calendar-day:hover {
-    background-color: #5c5d5d;
-  }
-  
-  .calendar-day.today {
-    background-color: #2962ff;
-  }
-  
-  .calendar-day.selected {
-    background-color: #f50057;
-  }
+#club-offline .title-jugador{
+  color: white;
+  margin-top: 100px;
+  font-size: 45px;
+}
+
+#club-offline .acceso-login{
+  margin-top: 80px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#club-offline .acceso-login .title-login .login{
+ color: rgb(15, 198, 15);
+ font-size: 20px;
+ text-decoration: none;
+}   
+
+#club-offline .acceso-login .title-login .login:hover{
+  color: red  
+}   
+
+.body-jugadores{
+  background-color: gainsboro;
+}
   
 
+/* filtros combobox */
+.filtro-club{
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 30px auto;
+}
+
+.combobox {
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 45px;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.combobox option {
+  background-color: #fff;
+  color: #333;
+}
+
+
+/* club  */
+.club {
+  width: 1300px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin: auto;
+  gap:10px
+   ;
+    
+}
+
+.card:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.card .circle-icon {
+  grid-row-start: auto;
+  align-self: center; 
+  justify-self: center; 
+}
+.club .info .img {
+  max-width: 100%; 
+  max-height: 100%;
+ 
+}
+
+.club .info .card{
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-start: initial;
+ 
+}
+
+.card .title {
+  font-size: 25px;
+  color: #cf0606;
+}
+
+/* map */
+.club .map{
+  
+  
+  }
+
+/* -------------------------------------------NOSOTROS -------------------------------------------*/
+/* nosotros - cabecera */
+
+#nosotros{
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/nosotros.png");
+  background-size: cover;
+  height: 400px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} 
+
+#nosotros .title-nosotros{
+  color: white;
+  margin-top: 50px;
+  font-size: 35px;
+}
+
+
+/* INDEX - seccion nosotros info */
+#nosotros-info {
+  padding: 15px 15px;
+  text-align: center;
+  background-color: #f3f3f3;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)), url("/img/fondo-padel.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#nosotros-info .fila {
+display: flex;
+justify-content: center;
+max-width: 1200px;
+margin: auto;
+}
+
+#nosotros-info .fila .info {
+width: 300px;
+background-color: #fff;
+padding: 25px;
+  margin-top:  10px;
+  margin-left: 10px ;
+  border-radius: 5px;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; 
+}
+#nosotros-info .fila .info:hover {
+box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
+background-color:rgba(255, 0, 0, 0.632);
+color: white  ;
+cursor: pointer;
+}
+
+#nosotros-info .fila .info h4 {
+font-size: 25px;
+margin-top: 20px;
+}
+#nosotros-info .fila .info h5 {
+  font-size: 15px;
+}
+#nosotros-info .fila .info h6 {
+  margin: 15px;
+}
+
+.circle-icon {
+width: 120px; 
+height: 120px;
+border-radius: 50%; 
+background-color: #f0f0f0;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.circle-icon .bi{
+color:rgba(0, 0, 255, 0.632); 
+font-size: 50px;
+
+}
+#nosotros-info .fila .info hr {
+width: 30%;
+margin: auto;
+color: #000;
+margin-bottom: 25px;
+}
+#nosotros-info .fila .info ul {
+list-style: none;
+display: flex;
+justify-content: space-around;
+margin-bottom: 10px;
+}
+#nosotros-info .fila .info p {
+margin-top: 20px;
+font-size: 14px;
+line-height: 22px;
+}
 
 
 
 /*---------------------------- seccion RESPONSIVE----------------------------------- */
 @media screen and (max-width: 800px) {
+  
      /* seccion estudios */
      #funcionalidades {
         padding: 50px 10px;
@@ -422,76 +725,546 @@ body{
     #funcionalidades .fila .proyecto {
         margin: auto 50%;
     }
-    .carousel-item {
-        height: calc(350vw / 3);
-      }
-      .carousel-item img {
-        object-fit: cover;
-        height: 100%;
-      }
-      .carousel-caption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 1rem;
-        color: #fff;
-        text-align: center;
-      }
-      .carousel-caption h5 {
-        font-size: 1.5rem;
-      }
-      .carousel-caption p {
-        font-size: 1rem;
-      }
-    }
-    
+  }
 
+  
 
+  /* ----------------------------------pagina PROFESORES------------------------------------- */
+  .carousel-inner{
+    margin-top: 65px;
+}
 
-
-
-
-
-
-    .calendar {
-  background: #c2c2c2;
-  width: 80%;
-  max-width: 600px;
-  margin: 1em auto;
-  padding: .5em 0; }
-  .calendar__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0 2em;
-    font-size: 1.2em;
-    text-transform: uppercase; }
-  .calendar__prev, .calendar__next {
-    color: #C7F464;
-    cursor: pointer;
-    font-size: 1.3em; }
-  .calendar__prev {
-    margin-right: auto; }
-  .calendar__next {
-    margin-left: auto; }
-  .calendar__week, .calendar__dates {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 10px; }
-  .calendar__month, .calendar__year {
-    padding: .5em 1em; }
-  .calendar__item {
+.elegirProfe h1, .misdatos h1{
     text-align: center;
-    line-height: 2; }
-  .calendar__today {
-    background: lightcoral;
-    color: white;
-    width: 50%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.col-md-4 {
+    margin-top: 20px ;
+    margin-bottom: 20px;
+}
+
+.card-img-top:hover{
+    transform:scale(1.2);
+}
+.contactar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.misdatos{
+    margin-top: 50px;
+}
+
+.containercalendario {
+    position: relative;
+    width: 1200px;
+    min-height: 850px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    border-radius: 10px;
+    background-color: #373c4f;
+}
+.left {
+    width: 60%;
+    padding: 20px;
+}
+.calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #878895;
+    border-radius: 5px;
+    background-color: #fff;
+}
+  /* set after behind the main element */
+.calendar::before,
+.calendar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 12px;
+    height: 97%;
+    border-radius: 0 5px 5px 0;
+    background-color: #d3d4d6d7;
+    transform: translateY(-50%);
+}
+.calendar::before {
+    height: 94%;
+    left: calc(100% + 12px);
+    background-color: rgb(153, 153, 153);
+}
+.calendar .month {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+}
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+    color: var(--primary-clr);
+}
+.calendar .weekdays {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.weekdays div {
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.calendar .days .day {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-clr);
+    border: 1px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(7n + 1) {
+    border-left: 2px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(7n) {
+    border-right: 2px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(-n + 7) {
+    border-top: 2px solid #f5f5f5;
+}
+.calendar .days .day:nth-child(n + 29) {
+    border-bottom: 2px solid #f5f5f5;
+}
+.calendar .days .day:not(.prev-date, .next-date):hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+.calendar .days .prev-date,
+.calendar .days .next-date {
+    color: #b3b3b3;
+}
+.calendar .days .active {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+.calendar .days .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 2px var(--primary-clr);
+}
+.calendar .days .today {
+    font-size: 2rem;
+}
+.calendar .days .event {
+    position: relative;
+}
+.calendar .days .event::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    height: 6px;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    background-color: var(--primary-clr);
+}
+.calendar .days .day:hover.event::after {
+    background-color: #fff;
+}
+.calendar .days .active.event::after {
+    background-color: #fff;
+    bottom: 20%;
+}
+.calendar .days .active.event {
+    padding-bottom: 10px;
+}
+.calendar .goto-today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: var(--primary-clr);
+}
+.calendar .goto-today .goto {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--primary-clr);
+}
+.calendar .goto-today .goto input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: var(--primary-clr);
+    border-radius: 5px;
+}
+.calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--primary-clr);
+}
+.calendar .goto-today button:hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+.calendar .goto-today .goto button {
+    border: none;
+    border-left: 1px solid var(--primary-clr);
+    border-radius: 0;
+}
+.containercalendario .right {
+    position: relative;
+    width: 40%;
+    min-height: 100%;
+    padding: 20px 0;
+}
+.right .today-date {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-left: 70px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.right .today-date .event-day {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.right .today-date .event-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #878895;
+}
+.events {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+}
+.events .event {
+    position: relative;
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+    padding-left: 50px;
+    color: #fff;
+    background: linear-gradient(90deg, #3f4458, transparent);
+    cursor: pointer;
+}
+  /* even event */
+.events .event:nth-child(even) {
+    background: transparent;
+}
+.events .event:hover {
+    background: linear-gradient(90deg, var(--primary-clr), transparent);
+}
+.events .event .title {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+.events .event .title .event-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.events .event i {
+    color: var(--primary-clr);
+    font-size: 0.5rem;
+}
+.events .event:hover i {
+    color: #fff;
+}
+.events .event .event-time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #878895;
+    margin-left: 15px;
+    pointer-events: none;
+}
+.events .event:hover .event-time {
+    color: #fff;
+}
+  /* add tick in event after */
+.events .event::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 3rem;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    color: var(--primary-clr);
+    transform: translateY(-50%);
+}
+.events .event:hover::after {
+    display: flex;
+}
+.add-event {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #878895;
+    border: 2px solid #878895;
+    opacity: 0.5;
     border-radius: 50%;
-    margin: auto; }
-  .calendar__last-days {
-    opacity: .3; }
+    background-color: transparent;
+    cursor: pointer;
+}
+.add-event:hover {
+    opacity: 1;
+}
+.add-event i {
+    pointer-events: none;
+}
+.events .no-event {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #878895;
+}
+.add-event-wrapper {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 90%;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    transition: max-height 0.5s ease;
+}
+.add-event-wrapper.active {
+    max-height: 300px;
+}
+.add-event-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #373c4f;
+    border-bottom: 1px solid #f5f5f5;
+}
+.add-event-header .close {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.add-event-header .close:hover {
+    color: var(--primary-clr);
+}
+.add-event-header .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.add-event-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+.add-event-body .add-event-input {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.add-event-body .add-event-input input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #373c4f;
+}
+.add-event-body .add-event-input input::placeholder {
+    color: #a5a5a5;
+}
+.add-event-body .add-event-input input:focus {
+    border-bottom: 1px solid var(--primary-clr);
+}
+.add-event-body .add-event-input input:focus::placeholder {
+    color: var(--primary-clr);
+}
+.add-event-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.add-event-footer .add-event-btn {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--primary-clr);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+}
+.add-event-footer .add-event-btn:hover {
+    background-color: transparent;
+    color: var(--primary-clr);
+}
+
+  /* media queries */
+
+@media screen and (max-width: 1000px) {
+body {
+    align-items: flex-start;
+    justify-content: flex-start;
+    }
+.containercalendario {
+    min-height: 100vh;
+    flex-direction: column;
+    border-radius: 0;
+}
+.containercalendario .left {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    }
+    .containercalendario .right {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+}
+.calendar::before,
+.calendar::after {
+    top: 100%;
+    left: 50%;
+    width: 97%;
+    height: 12px;
+    border-radius: 0 0 5px 5px;
+    transform: translateX(-50%);
+    }
+    .calendar::before {
+    width: 94%;
+    top: calc(100% + 12px);
+    }
+    .events {
+    padding-bottom: 340px;
+    }
+    .add-event-wrapper {
+    bottom: 100px;
+    }
+}
+@media screen and (max-width: 500px) {
+.calendar .month {
+    height: 75px;
+    }
+.calendar .weekdays {
+    height: 50px;
+    }
+.calendar .days .day {
+    height: 40px;
+    font-size: 0.8rem;
+}
+.calendar .days .day.active,
+.calendar .days .day.today {
+    font-size: 1rem;
+    }
+    .right .today-date {
+    padding: 20px;
+}
+}
+
+
+
+
+
+
