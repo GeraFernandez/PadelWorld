@@ -73,65 +73,69 @@
  
   
   <body>
-       <!-- NAV -->
-    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="/img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    
+  <!-- NAV -->
+  <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><!-- modif agregar links a paginas -->
-              <a class="nav-link"  href="/index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
-            </li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><!-- modif agregar links a paginas -->
+            <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/clubes.html">Clubes</a>
+            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
           </li>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/profesores.html">Profesores</a>
-            </li>
-          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/clubes.html">Clubes</a>
+        </li>
+        </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/pages/torneos.html">Torneos</a>
+            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
           </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Otros
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
-                <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
-  
-              </ul>
-            </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/torneos.html">Torneos</a>
+        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Otros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
+              <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 flex-grow-1" type="search" placeholder="Ingrese su busqueda" aria-label="Search">
+          <button class="btn btn-danger btn-enviar" type="submit"><i class="bi bi-search"></i></button>         
+        </form>
+        
+        <!-- icono user -->
+        <div class="nav-item dropdown ms-3">  <!-- modif consultar profe como hacer con el icono user   -->
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle display-6"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="/pages/registrarse.html">Registrarse</a></li>
           </ul>
-  
-          <form class="d-flex" role="search">
-              <input class="form-control me-2 flex-grow-1" type="search" placeholder="Ingrese su busqueda" aria-label="Search">
-              <button class="btn btn-danger btn-enviar" type="submit"><i class="bi bi-search"></i></button>         
-            </form>
-  
-                    <!-- icono user -->
-          <div class="nav-item dropdown ms-3">  <!-- modif consultar profe como hacer con el icono user   -->
-              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle display-6"></i>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
-                <li><a class="dropdown-item" href="#">Registrarse</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </nav>
+        
+        
+
+      </div>
+    </div>
+  </nav>
+
   
       <div class="container-fluid mt-1">
         <!-- CARUSEL -->

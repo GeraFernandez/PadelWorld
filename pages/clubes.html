@@ -34,6 +34,7 @@
 <body class="body-jugadores">
 
 
+  
   <!-- NAV -->
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
     <div class="container-fluid">
@@ -69,7 +70,8 @@
               <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
               <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Contacto</a></li>
+              <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
+
             </ul>
           </li>
         </ul>
@@ -84,8 +86,8 @@
             <i class="bi bi-person-circle display-6"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="#">Registrarse</a></li>
+            <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="/pages/registrarse.html">Registrarse</a></li>
           </ul>
         </div>
         
@@ -94,156 +96,212 @@
       </div>
     </div>
   </nav>
-  
 
   
-  
+
   
 
   <!-- PERFIL JUGADOR -->
-  <div class="container mt-4">
-    
-    <div class="row d-flex justify-content-center">
-        
-        <div class="col-md-12"> 
-            <div class="card py-5">                
-     
-                <div class="text-center mt-1">
-                    <span class="bg-secondary p-1 px-4 rounded text-white">MI CLUB</span>
-                    <h2 class="mt-2 mb-0">EL MUNDO DEL PADEL</h2>               
-                    <h6 class="mt-2 mb-0">Cordoba, Argentina</h6>                 
-                    <div class="px-3 mt-2">
-                        <p class="fonts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam suscipit, unde accusantium natus praesentium similique corrupti eligendi error quaerat, quia necessitatibus! Magnam, quia ad sequi nulla doloremque nihil animi debitis expedita. Quis minus rerum harum in quisquam enim cum..</p>
-                    
-                    </div>
-                    
-                     <ul class="social-list">
-                        <li><i class="bi bi-facebook"></i></li>
-                        <li><i class="bi bi-whatsapp"></i></li>
-                        <li><i class="bi bi-instagram"></i></li>
 
-                    </ul>
-                    
-                    <div class="buttons">
-                        
-                        <button class="btn btn-outline-primary px-4">Mensaje</button>
-                        <button class="btn btn-primary px-4 ms-3">Contacto</button>
-                    </div>            
-                </div>           
-            </div>      
-        </div>       
-    </div> 
+<main id="jugador-offline">
+  <h1 class="title">CLUBES</h1>
+  <div class="acceso-login">
+    <a class="login" href="">¿Sos un club?</a>
+    <a class="login" href="">Registrate</a>
+  </div>
+</main>
+  
+<!-- info general -->
+<section class="info-gral">
+  <div class="info">
+    <h1 class="title">Alquila tu cancha en tu complejo deportivo</h1>
+    <p class="contenido">Te mostramos los beneficios de tener un canal online para gestionar tu club que permite a los usuarios reservar online.
+    Dejanos tus datos de contacto así podemos ponernos en contacto contigo.</p>
+  </div >
+
+  <div class="botones">
+    <button type="button" class="btn btn-outline-success"> Ver mas </button>
+    <button type="button" class="btn btn-outline-success">Contacto</button>
+  </div>
+</section>
 
 
+<!-- CAJA BUSQUEDA -->
+<section>  
+  <div class="container">
+    <div class="caja-busqueda">
+      <div class="busqueda-ubicacion">
+        <form class="row gx-2 gy-2 align-items-center mt-1 mb-1">
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeInputName">Club</label>
+            <input type="text" class="form-control" id="specificSizeInputName" placeholder="Club">
+          </div>
+          <div class="col-sm-2">
+            <label class="visually-hidden" for="specificSizeInputGroupUsername">fecha</label>
+            <div class="input-group">
+              <input type="date" class="form-control" id="specificSizeInputGroupUsername" placeholder="Fecha">
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeSelect">Preferencia</label>
+            <select class="form-select" id="specificSizeSelect">
+              <option selected>Provincia</option>
+              <option value="1">Uno</option>
+              <option value="2">Dos</option>
+              <option value="3">Tres</option>
+            </select>
+          </div>
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeSelect">Preferencia</label>
+            <select class="form-select" id="specificSizeSelect">
+              <option selected>Ciudad</option>
+              <option value="1">Uno</option>
+              <option value="2">Dos</option>
+              <option value="3">Tres</option>
+            </select>
+          </div>
+         
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>
 
-<!-- tarjetas jugadores -->
-<div class="container JUGADOR">
-  <div class="row ">
-    <div class="col-md-4 ">
-      <div class="card  ">
-        <img src="/img/fondo-padel3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">HORARIOS</h5>
-          <p class="card-text">Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+
+  
+<!-- FILTROS -->
+  <section id="club-filtros">
+
+    <div class="combo-box">
+      <label for="cbobox-icon"><i class="bi bi-arrow-down-up"></i></label>
+      <select class="opcion">
+       <option value="opcion1">-Ordenar-</option>
+       <option value="opcion2">A-Z</option>
+       <option value="opcion3">Precio</option>
+       <option value="opcion3">Puntaje</option>
+     </select>
+    </div>
+
+    <div class="combo-box">
+      <label for="cbobox-icon"><i class="bi bi-arrow-down-up"></i></label>
+      <select class="opcion">
+       <option value="opcion1">-Superficie-</option>
+       <option value="opcion2">Sintetico</option>
+       <option value="opcion3">Dura</option>
+     </select>
+    </div>
+
+    <div class="combo-box">
+      <label for="cbobox-icon"><i class="bi bi-arrow-down-up"></i></label>
+      <select class="opcion">
+       <option value="opcion1">-Duracion-</option>
+       <option value="opcion2">60 min</option>
+       <option value="opcion3">90 min</option>
+       <option value="opcion3">120 min</option>
+     </select>
+    </div>
+
+    <div class="combo-box">
+      <label for="cbobox-icon"><i class="bi bi-arrow-down-up"></i></label>
+      <select class="opcion">
+       <option value="opcion1">-Otros servicios-</option>
+       <option value="opcion2">Techada</option>
+       <option value="opcion3">Estacionamiento</option>
+     </select>
+    </div>
+
+  </section>
+
+<!-- seccion clubes  -->
+<section id="clubes">
+  <div class="tarjetas">
+    <div class="card">
+      <div class="foto">
+        <img src="/img/A.PNG" alt="" srcset="">
+       </div> 
+      <div class="info">
+        <div class="title">
+           <h3>CLUB TELEFONOS PADEL</h3>
+           <h3 class="star">5.0 <i class="bi bi-star-fill"></i></h3>
         </div>
+        <h5> <i class="bi bi-geo-alt"></i> Av. Fernando Fader 4535 , Cordoba</h5>
+        <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>
+        <h4> <i class="bi bi-whatsapp"></i><a href="https://api.whatsapp.com/send/?phone=5493517052467&text&type=phone_number&app_absent=0"> 3517052467</a></h4>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="/img/fondo-padel2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">PRECIOS</h5>
-          <p class="card-text">Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+
+    <div class="card">
+      <div class="foto">
+        <img src="/img/A.PNG" alt="" srcset="">
+       </div> 
+      <div class="info">
+        <div class="title">
+           <h3>NEW GARDEN PADEL</h3>
+           <h3 class="star">5.0 <i class="bi bi-star-fill"></i></h3>
         </div>
+        <h5> <i class="bi bi-geo-alt"></i> Av. Fernando Fader 4535 , Cordoba</h5>
+        <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>
+        <h4> <i class="bi bi-whatsapp"></i><a href="https://api.whatsapp.com/send/?phone=5493517052467&text&type=phone_number&app_absent=0"> 3517052467</a></h4>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">TORNEOS Y MAS</h5>
-          <p class="card-text">Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+
+    <div class="card">
+      <div class="foto">
+        <img src="/img/A.PNG" alt="" srcset="">
+       </div> 
+      <div class="info">
+        <div class="title">
+           <h3>LES COURTS</h3>
+           <h3 class="star">5.0 <i class="bi bi-star-fill"></i></h3>
         </div>
+        <h5> <i class="bi bi-geo-alt"></i> Av. Goycoechea 2013 , Cordoba</h5>
+        <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>
+        <h4> <i class="bi bi-whatsapp"></i><a href="https://api.whatsapp.com/send/?phone=5493517052467&text&type=phone_number&app_absent=0"> 3517052467</a></h4>
       </div>
     </div>
- 
-   
-      </div>
-    </div>
-  </div>
-</div>
 
+    <div class="card">
+      <div class="foto">
+        <img src="/img/A.PNG" alt="" srcset="">
+       </div> 
+      <div class="info">
+        <div class="title">
+           <h3>TERRAZAS PADEL CLUB</h3>
+           <h3 class="star">4.7 <i class="bi bi-star-fill"></i></h3>
+        </div>
+        <h5> <i class="bi bi-geo-alt"></i> Av. Goycoechea 2013 , Cordoba</h5>
+        <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>
+        <h4> <i class="bi bi-whatsapp"></i><a href="https://api.whatsapp.com/send/?phone=5493517052467&text&type=phone_number&app_absent=0"> 3517052467</a></h4>
+      </div>
+    </div>
 
-<!-- menu jugodores -->
-<DIV class="container mt-4">
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Acordeón artículo #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra de forma predeterminada, hasta que el complemento de colapso agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Acordeón artículo #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento de Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Acordeón artículo #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+    <div class="card">
+      <div class="foto">
+        <img src="/img/A.PNG" alt="" srcset="">
+       </div> 
+      <div class="info">
+        <div class="title">
+           <h3>PADEL BOX</h3>
+           <h3 class="star">5.0 <i class="bi bi-star-fill"></i></h3>
+        </div>
+        <h5> <i class="bi bi-geo-alt"></i> Caseros 1727, Cordoba</h5>
+        <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>
+        <h4> <i class="bi bi-whatsapp"></i><a href="https://api.whatsapp.com/send/?phone=5493517052467&text&type=phone_number&app_absent=0"> 3517052467</a></h4>
       </div>
     </div>
   </div>
-</div>
-</DIV>
 
+  <div class="map">
+    <h1 class="title">MAPA DE UBICACION</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d54481.59911245682!2d-64.21680612311262!3d-31.411372331615993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spadel!5e0!3m2!1ses-419!2sar!4v1686321285044!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
 
-<DIV class="container">
-<div class="calendar">
-    <div class="calendar__info">
-        <div class="calendar__prev" id="prev-month">&#9664;</div>
-        <div class="calendar__month" id="month"></div>
-        <div class="calendar__year" id="year"></div>
-        <div class="calendar__next" id="next-month">&#9654;</div>
-    </div>
-
-    <div class="calendar__week">
-        <div class="calendar__day calendar__item">Mon</div>
-        <div class="calendar__day calendar__item">Tue</div>
-        <div class="calendar__day calendar__item">Wed</div>
-        <div class="calendar__day calendar__item">Thu</div>
-        <div class="calendar__day calendar__item">Fri</div>
-        <div class="calendar__day calendar__item">Sat</div>
-        <div class="calendar__day calendar__item">Sun</div>
-    </div>
-
-    <div class="calendar__dates" id="dates"></div>
-</div>
-</DIV>
-
-<script src="/js/scrips.js"></script>
 
 
 <!-- SECCION FOOTER -->

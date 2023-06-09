@@ -446,17 +446,58 @@ body{
   }
 }
 
-
+/* menu juagadores- titulos */
 #menu-jugadores{
-  max-width: 1200px;
+  max-width: 1150px;
   margin:  20px auto 100px auto;
-  display:flex;
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+
+}
+
+#menu-jugadores .titulos{
+background-color: whitesmoke;
+border-radius: 15px;
+height: 200px;
+margin: 10px;
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+
+#menu-jugadores .item{
+  padding-left: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+#menu-jugadores .item:hover{
+  background-color: red;
+  color: white;
 }
  
+/* menu juagadores- contenido*/
 
+#menu-jugadores .contenido {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+#menu-jugadores .contenido .title{
+  font-size: 20px;
+}
 
 
 /* ---------------------------------------------PAGINA CLUBES------------------------------------- */
+
 
 /* CLUBES - cabecera */
 #club-offline{
@@ -525,54 +566,97 @@ body{
 }
 
 
-/* club  */
-.club {
-  width: 1300px;
-  height: 600px;
+/* filtros clubes */
+#club-filtros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 20px;
+  font-size: 15px;
+}
+
+#club-filtros .opcion{
+  border-radius: 15px;
+  width: 150px;
+}
+  
+
+
+/* clubes */
+#clubes {
+  
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  margin: auto;
-  gap:10px
-   ;
-    
+  align-items: center;
+  justify-content: space-between;
 }
 
-.card:hover{
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-}
-.card .circle-icon {
-  grid-row-start: auto;
-  align-self: center; 
-  justify-self: center; 
-}
-.club .info .img {
-  max-width: 100%; 
-  max-height: 100%;
- 
+#clubes .tarjetas{
+  height: 500px;
+  overflow-y: auto;
+
+  
 }
 
-.club .info .card{
-  border-radius: 20px;
+#clubes .card{
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-column-start: initial;
- 
+  align-items: center;
+  justify-content: space-between;
+}
+#clubes .card .foto{
+  margin-left: 10px;
+  
 }
 
-.card .title {
-  font-size: 25px;
-  color: #cf0606;
+#clubes .card img{
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+#clubes .card .info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
 
-/* map */
-.club .map{
-  
-  
-  }
+#clubes .card .info .title{
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  cursor: pointer;
+}
 
+#clubes .card .info .title h3{
+  font-size: 20px;
+  color: red;
+}
+
+#clubes .card .info .title .star{
+  font-size: 20px;
+  color: goldenrod;
+}
+
+#clubes .card .info h5{
+  font-size: 15px;
+}
+
+#clubes .card .info h4{
+  font-size: 15px;
+}
+
+/* MAPA */
+#clubes .map {
+  height: 500px;
+  background-color: whitesmoke;
+  padding: 0px 30px 0px 30px;
+  border-radius: 15px;
+  margin: auto;
+}
 /* -------------------------------------------NOSOTROS -------------------------------------------*/
 /* nosotros - cabecera */
 
@@ -591,6 +675,48 @@ body{
   color: white;
   margin-top: 50px;
   font-size: 35px;
+}
+
+/* club info general */
+.info-gral{
+  width: 1300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* nosotros info general */
+.info-gral.nosotros{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.info-gral .title{
+  color: red;
+  font-weight: bold ;
+}
+
+.info-gral .contenido{
+  font-weight: bold ;
+}
+
+/* info general botnoes */
+.info-gral .botones{
+  height: 100px;
+  margin: auto 50px auto 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  
+
 }
 
 
