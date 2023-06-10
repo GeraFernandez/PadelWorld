@@ -80,7 +80,7 @@ footer a {
     padding: 15px 15px;
     text-align: center;
     background-color: #f3f3f3;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)), url("/img/fondo-padel.jpg");
+    background: linear-gradient(to bottom, rgba(194, 7, 7, 0.9), rgba(0, 0, 0, 0.9)), url("/img/funcionalidades.png");
     background-size: cover;
     background-position: center center;
 }
@@ -115,6 +115,7 @@ footer a {
 #funcionalidades .fila .funcionalidades h4 {
   font-size: 22px;
   margin-bottom: 25px;
+  color: red;
 }
 
 .circle-icon {
@@ -245,7 +246,7 @@ body{
 
 /* jugadores - cabecera */
 #jugador-offline{
-  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-jugadores.png");
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-jugadoresss.png");
   background-size: cover;
   height: 400px;
   background-color: blue;
@@ -258,7 +259,9 @@ body{
 #jugador-offline .title{
   color: white;
   margin-top: 100px;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 10px;
 }
 
 #jugador-offline .acceso-login{
@@ -303,6 +306,8 @@ body{
   grid-template-columns: 150px auto ;
   grid-template-rows: 200px auto ; 
   border-radius: 20px;
+  justify-content: center
+;
  
 }
 
@@ -452,11 +457,12 @@ body{
   margin:  20px auto 100px auto;
   display:grid;
   grid-template-columns: 1fr 2fr;
+  
 
 }
 
 #menu-jugadores .titulos{
-background-color: whitesmoke;
+
 border-radius: 15px;
 height: 200px;
 margin: 10px;
@@ -464,6 +470,7 @@ padding: 10px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+background-color: rgba(220,220,220,255);
 }
 
 
@@ -471,10 +478,15 @@ justify-content: space-between;
   padding-left: 10px;
   text-decoration: none;
   font-size: 20px;
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 15PX;
+  background-color: white;
 }
 #menu-jugadores .item:hover{
   background-color: red;
   color: white;
+  
+  
 }
  
 /* menu juagadores- contenido*/
@@ -500,8 +512,9 @@ justify-content: space-between;
 
 
 /* CLUBES - cabecera */
+/* jugadores - cabecera */
 #club-offline{
-  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-club.jpg");
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-club.png");
   background-size: cover;
   height: 400px;
   background-color: blue;
@@ -511,10 +524,12 @@ justify-content: space-between;
   flex-direction: column;
 }
 
-#club-offline .title-jugador{
+#club-offline .title{
   color: white;
   margin-top: 100px;
-  font-size: 45px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 10px;
 }
 
 #club-offline .acceso-login{
@@ -525,19 +540,21 @@ justify-content: space-between;
   justify-content: space-evenly;
 }
 
-#club-offline .acceso-login .title-login .login{
+#club-offline .acceso-login .login{
  color: rgb(15, 198, 15);
  font-size: 20px;
  text-decoration: none;
 }   
 
-#club-offline .acceso-login .title-login .login:hover{
-  color: red  
+#club-offline .acceso-login .login:hover{
+  color: whitesmoke 
+ 
 }   
 
 .body-jugadores{
   background-color: gainsboro;
 }
+
   
 
 /* filtros combobox */
@@ -588,7 +605,7 @@ justify-content: space-between;
   
   max-width: 1300px;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -657,11 +674,203 @@ justify-content: space-between;
   border-radius: 15px;
   margin: auto;
 }
-/* -------------------------------------------NOSOTROS -------------------------------------------*/
+
+
+/* ------------------------------------------PAGINA TORNEOS------------------- */
+
+/* torneo - cabecera */
+#torneo-offline{
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-torneos.png");
+  background-size: cover;
+  height: 400px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#torneo-offline .title{
+  color: white;
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+#torneo-offline .acceso-login{
+  margin-top: 80px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#torneo-offline .acceso-login .login{
+ color: rgb(15, 198, 15);
+ font-size: 20px;
+ text-decoration: none;
+}   
+
+#torneo-offline .acceso-login .login:hover{
+  color: red  
+}   
+
+.body-jugadores{
+  background-color: gainsboro;
+}
+
+
+/* torneos main */
+.torneos-main{
+  max-width: 1200px;
+  margin: 20px auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.torneos-main .title{
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.torneos-main .content{
+margin-left: 150px;
+margin-right: 150px;
+text-align: center;
+}
+
+/* torneos - galeria de imagenes */
+.torneos-galeria{
+  margin: auto;
+  display: flex;
+  width: 600px;
+  height: 430px;
+}
+
+.torneos-galeria img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: 0.5s ease;
+} 
+
+.torneos-galeria img:hover{
+  cursor: pointer;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+
+
+/* funcionalidades */
+#torneos-funcionalidades{
+  max-width: 1100px;
+  display: grid ;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 150px 200px;
+  gap: 10px;
+  margin-bottom: 400px;
+}
+
+#torneos-funcionalidades .funciones{
+  border: #000;
+  padding: 5px;
+  background-color: white; 
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  border-radius: 20px;
+  align-items: center;
+}
+
+#torneos-funcionalidades .funciones:hover{
+  background-color: blue; 
+  box-shadow: 5px 5px 10px #080808, -5px -5px 10px #8a8a8a;
+  color: white;
+  transition: background-color 0.3s, box-shadow 1s;
+}
+
+
+
+#torneos-funcionalidades .funciones h2{
+  color: red;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin: 5px auto 10px auto;
+  
+}
+
+#torneos-funcionalidades .funciones p{
+  margin-right: 25px;
+  font-size: 15px;
+  margin: 15px 30px 15px 30px;
+
+  
+}
+
+
+ #torneos-funcionalidades .funciones.uno{
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin-top: 20px;
+
+}
+#torneos-funcionalidades .funciones.dos{
+  grid-row: 1/3;
+  margin-top: 20px;
+}
+
+#torneos-funcionalidades .funciones.tres{
+  grid-column: 2/4;
+  grid-row: 3/4;
+}
+
+
+/* JUGADORES - tarjetas */
+
+
+
+.funciones-jugador .info{
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr  ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.funciones-jugador .info .title{
+  margin-top:auto;
+  margin-bottom: 10px;
+  font-size: 20px;
+ 
+}
+.funciones-jugador .info .parrafo{
+  margin-right: 25px;
+  font-size: 15px;
+}
+
+.funciones-jugador .info .link{
+  margin-right:50px;
+  margin-left: auto;
+  color: red;
+  font-weight: bolder;
+}
+
+
+/* -------------------------------------------PAGINA NOSOTROS -------------------------------------------*/
 /* nosotros - cabecera */
 
+#torneos-funcionalidades{
+  margin: auto;
+  width: 1300px;
+}
+
 #nosotros{
-  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/nosotros.png");
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-nosotros.png");
   background-size: cover;
   height: 400px;
   background-color: blue;
@@ -673,13 +882,15 @@ justify-content: space-between;
 
 #nosotros .title-nosotros{
   color: white;
-  margin-top: 50px;
-  font-size: 35px;
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 10px;
 }
 
 /* club info general */
 .info-gral{
-  width: 1300px;
+  width: 1200px;
   margin: 0 auto;
   margin-top: 20px;
   border-radius: 20px;
@@ -769,6 +980,7 @@ margin-top: 20px;
 }
 
 .circle-icon {
+margin: auto;
 width: 120px; 
 height: 120px;
 border-radius: 50%; 
@@ -806,7 +1018,7 @@ line-height: 22px;
 /*---------------------------- seccion RESPONSIVE----------------------------------- */
 @media screen and (max-width: 800px) {
   
-     /* seccion estudios */
+     /* seccion funcionalidades */
      #funcionalidades {
         padding: 50px 10px;
     }
