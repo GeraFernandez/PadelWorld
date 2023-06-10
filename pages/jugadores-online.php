@@ -1,17 +1,19 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = $_POST["email"];
-  $password = $_POST["password"];
+<?php 
+require_once('config.php');
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-  // Aquí puedes realizar las acciones necesarias con los valores recibidos
-  // por ejemplo, validar el inicio de sesión o almacenarlos en una base de datos
+$query = "SELECT u.id, u.correo, u.password, u.status, r.nombre as rol FROM usuarios u left join roles r ON u.rol_id = r.id where correo = '$email' AND password = '$password' AND status = 1";
+$result = $conexion->query($query);
+$row = $result->fetch_assoc();
 
-  // Ejemplo de validación básica
-  if ($email == "correo@example.com" && $password == "contraseña") {
-    echo "Inicio de sesión exitoso";
-  } else {
-    echo "Credenciales inválidas";
-  }
+if($result->num_rows > 0){
+  session_start();
+  $_SESSION['user'] = $email;
+  $_SESSION['rol'] = $row['rol'];
+  header("Location: /pages/jugadores-online.php");
+}else{
+  header("Location: /pages/registrarse.html");
 }
 ?>
 
