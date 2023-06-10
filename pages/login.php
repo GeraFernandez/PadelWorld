@@ -1,3 +1,20 @@
+
+<?php 
+require_once('config.php');
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+$query = "SELECT * FROM usuarios where correo = '$email' AND password = '$password'";
+$result = $conexion->query($query);
+
+if($result->num_rows > 0){
+  
+  header("Location: /pages/jugadores-online.php");
+}else{
+  header("Location: /pages/registrarse.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,13 +132,13 @@
   
                 <!-- Email input -->
                 <div class="form-outline mb-">
-                  <input type="email" id="form3Example3" class="form-control" />
+                  <input type="email" id="form3Example3" class="form-control" name="email" />
                   <label class="form-label" for="form3Example3">EMAIL</label>
                 </div>
   
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" />
+                  <input type="password" id="form3Example4" class="form-control" name="password"/>
                   <label class="form-label" for="form3Example4">CONTRASEÑA</label>
                   <a class="ps-5 ms-5 " href="/pages/registrarse.html">Olvidaste la contraseña?</a>
                 </div>
