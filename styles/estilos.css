@@ -80,7 +80,7 @@ footer a {
     padding: 15px 15px;
     text-align: center;
     background-color: #f3f3f3;
-    background: linear-gradient(to bottom, rgba(194, 7, 7, 0.9), rgba(0, 0, 0, 0.9)), url("/img/funcionalidades.png");
+    background: linear-gradient(to bottom, rgba(226, 85, 85, 0.9), rgba(0, 0, 0, 0.9)), url("/img/funcionalidades.png");
     background-size: cover;
     background-position: center center;
 }
