@@ -90,51 +90,16 @@
     </div>
   </nav>
 
-  <div class="container-fluid mt-1">
-    <!-- CARUSEL -->
-    <div id="carouselExampleCaptions" class="carousel slide">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <!-- modif ver transiciones -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/img/fondo-padel2.jpg" class="d-block w-100 " alt="carousel1"> <!-- MODIF ver aca para ajustar responsive -->
-          <div class="carousel-caption ">
-            <h2>Encontrá el profe de pádel ideal</h2>
-            <p>Consultá libremente los perfiles y contactá al mejor profe según tus criterios (tarifas, títulos, opiniones, clases de pádel a domiciolio o vía webcam)</p>
-            <a href="#ElegirProfe" class="btn btn-primary">Profes</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="/img/agenda-world-padel-tour-2023.jpg" class=" w-100" alt="carousel2">
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Organizá tus clases de pádel</h2>
-            <p>Enviá pedidos de clases a los profes de pádel para indicarles tus necesidades y tu disponibilidad.</p>
-            <a href="#misdatos" class="btn btn-primary">Más Info</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="/img/pxfuel.jpg" class="d-block w-100" alt="carousel3">
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Viví nuevas experiencias en Deportes de raqueta</h2>
-            <p>Accedé a grandes beneficios exclusivos en alquiler de canchas, clases, tan sólo registrándote.</p>
-            <a href="registrarse.html" class="btn btn-primary">Registrarse</a>
-          </div>
-      </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+   <!-- PERFIL JUGADOR -->
+
+<main id="jugador-offline">
+  <h1 class="title">PROFESORES</h1>
+  <div class="acceso-login">
+    <a class="login" href="">Iniciar sesion</a>
+    <a class="login" href="">Registrarse</a>
+  </div>
+</main>
+  
 
  <!-- CAJA BUSQUEDA -->
 <section>  
@@ -281,43 +246,47 @@
     </div> 
   </section>
 
-    <!-- menu Profesores -->
-<section id="misdatos" class="misdatos">
-  <h1>Mis alumnos</h1>
-  <div class="container" >
-  <div class="row">
-    <div class="col-lg-4 col-md-12">
-      <div class="list-group" id="menu">
-        <a href="#" class="list-group-item list-group-item-action active">Mis alumnos</a>
-        <a href="#" class="list-group-item list-group-item-action">Mis reservas</a>
-        <a href="#" class="list-group-item list-group-item-action">Mis clases</a>
-        <a href="#" class="list-group-item list-group-item-action">Historial</a>
-        <a href="#" class="list-group-item list-group-item-action">Amigos</a>
-        <a href="#" class="list-group-item list-group-item-action">Métodos de pago</a>
+  
+<!-- menu jugodores -->
+<section id="menu-jugadores">
+  <div class="titulos">
+        <a class="item" href="#misreservas" onclick="seleccionar(this)">MIS RESERVAS</a>
+        <a class="item" href="#mistorneos" onclick="seleccionar(this)">MIS TORNEOS</a>
+        <a class="item" href="#misclases" onclick="seleccionar(this)">MIS CLASES</a>
+        <a class="item" href="#amigos" onclick="seleccionar(this)">AMIGOS</a>
+        <a class="item" href="#pagos" onclick="seleccionar(this)">METODOS DE PAGO</a>
       </div>
     </div>
-    <div class="col-lg-8 col-md-12 bg-white">
-      <div id="opcion1" class="d-none">
-        Mis reservas
-      </div>
-      <div id="opcion2" class="d-none">
-        Mis torneos
-      </div>
-      <div id="opcion3" class="d-none">
-        Mis clases
-      </div>
-      <div id="opcion4" class="d-none">
-        Historial
-      </div>
-      <div id="opcion5" class="d-none">
-        Metodos de pago
-      </div>
-      <div id="opcion6" class="d-none">
-        Metodos de pago
-      </div>
+
+    <div class="contenido">
+  
+  <section id="misreservas">
+    <h3 class="title" >MIS RESERVAS</h3>
+    <p></p>
+  </section>
+
+  <section id="mistorneos">
+    <h3 class="title">MIS TORNEOS</h3>
+    <p>Resultados en tiempo real, analisis de rivales, actualizá tu propio score, accedé a los rankings y mucho más</p>
+  </section>
+
+  <section id="misclases">
+    <h3 class="title">MIS CLASES</h3>
+    <p>Encontrá profesores de tenis en todo el país, administrá tu calendario.</p>
+  </section>
+
+  <section id="amigos">
+    <h3 class="title">AMIGOS</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+  </section>
+
+  <section id="pagos">
+    <h3 class="title">METODOS DE PAGO</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+  </section>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Calendario Profesores -->
 

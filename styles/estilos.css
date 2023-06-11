@@ -744,22 +744,31 @@ text-align: center;
 }
 
 /* torneos - galeria de imagenes */
-.torneos-galeria{
+.galeria{
   margin: auto;
   display: flex;
-  width: 600px;
+  width: 700px;
   height: 430px;
 }
 
-.torneos-galeria img{
+.galeria.clubes{
+  margin: auto;
+  display: flex;
+  width: 1000px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.galeria img{
   width: 0px;
   flex-grow: 1;
   object-fit: cover;
   opacity: .8;
+  filter: sepia(.8);
   transition: 0.5s ease;
 } 
 
-.torneos-galeria img:hover{
+.galeria img:hover{
   cursor: pointer;
   width: 300px;
   opacity: 1;
@@ -775,7 +784,7 @@ text-align: center;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 150px 200px;
   gap: 10px;
-  margin-bottom: 400px;
+
 }
 
 #torneos-funcionalidades .funciones{
