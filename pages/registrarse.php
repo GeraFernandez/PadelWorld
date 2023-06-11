@@ -1,3 +1,17 @@
+<?php
+$servidor = "localhost";
+$usuario = "root";
+$clave = "";
+$baseDeDatos = "padelworld";
+
+$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,33 +126,39 @@
   
           <div class="bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form>
+              <form action="#" name="padelword" method="post">
 
                   <!-- NOMBRE input -->
                   <div class="form-outline mb-3">
                     <label class="form-label" for="form3Example3">NOMBRE</label>
-                    <input type="text" id="form3Example3" class="form-control" />
+                    <input type="text" name="nombre" id="form3Example3" class="form-control" />
                   </div>
 
                     <!-- APELLIDO input -->
                 <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example3">APELLIDO</label>
-                  <input type="text" id="form3Example3" class="form-control" />
+                  <input type="text" name="apellido" id="form3Example3" class="form-control" />
                  
                 </div>
+
+               <!-- Telefono input -->
+                <div class="form-outline mb-3">
+                  <label class="form-label" for="form3Example3">Telefono</label>
+                  <input type="text"  name="telefono" id="form3Example3" class="form-control"/>
                 
+                </div>
   
                 <!-- Email input -->
                 <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example3">EMAIL</label>
-                  <input type="email" id="form3Example3" class="form-control" placeholder="ejemplo@gmail.com" />
+                  <input type="email"  name="correo" id="form3Example3" class="form-control" placeholder="ejemplo@gmail.com" />
                 
                 </div>
   
                 <!-- Password input -->
                 <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example4">CONTRASEÑA</label>
-                  <input type="password" id="form3Example4" class="form-control" placeholder="Minimo 8 caracteres" />
+                  <input type="password" name="password" id="form3Example4" class="form-control" placeholder="Minimo 8 caracteres" />
                 </div>
 
                  <!-- Password input -->
@@ -156,13 +176,13 @@
                 </div>
   
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  INICIAR SESION
-              </button>
-              <p>
+                <input type="submit" name="registro" class="btn btn-primary btn-block mb-4">
+                 
+            
+                <p>
                   ¿Ya tienes cuenta? 
                   <a href="/pages/login.html">Iniciar sesion</a>
-              </p>
+                </p>
               
   
                 <!-- Register buttons -->
@@ -210,4 +230,24 @@
       <!-- bootstrap js -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
+
+
+  <?php
+
+if(isset($_POST['registro'])){
+ $correo= $_POST['correo'];
+ $password= $_POST['password'];
+ $telefono= $_POST['telefono'];
+ $nombre= $_POST['nombre'];
+ $apellido= $_POST['apellido'];
+ 
+ 
+      
+
+$insertarDatos = "INSERT INTO usuarios VALUES ('$correo', '$password', '$telefono', '$nombre', '$apellido')";
+$ejecutarInsertar= mysqli_query($enlace, $insertarDatos);
+}
+?>
+
+
   </html>

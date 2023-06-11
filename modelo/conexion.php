@@ -1,11 +1,11 @@
-<?php
+<!-- <?php
 
 $server = "localhost";
 $user = "root";
 $pass = "";
-$db = "padelworld";
+$db = "test";
 
-$conexion = new mysqli($server, $correo, $password, $db);
+$conexion = new mysqli($server, $user, $pass, $db);
 
 if ($conexion->connect_errno) {
     die("Conexion fallida" .  $conexion->connect_errno);
@@ -13,4 +13,4 @@ if ($conexion->connect_errno) {
     echo "conectado";
 }
 
-?>
+?> -->
