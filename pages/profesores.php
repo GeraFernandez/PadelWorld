@@ -1,16 +1,3 @@
-<?php
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "padelworld";
-
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,28 +12,23 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
    <!-- iconos -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+      <script src="https://kit.fontawesome.com/0b425f259f.js" crossorigin="anonymous"></script>
     
     <!-- bootsrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/styles/estilos.css">
+    <link rel="stylesheet" href="/styles/css/Profes.css">
     
 
     
-    <title>Padel World - Jugadores</title>
+    <title>Padel World - Profesores</title>
 
 
-    
+   
 </head>
 <body>
-	
-</body>
-</html>
-
-</head>
-<body class="body-jugadores">
-
-
   <!-- NAV -->
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
     <div class="container-fluid">
@@ -57,10 +39,10 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><!-- modif agregar links a paginas -->
-            <a class="nav-link " aria-current="page" href="/index.html">Inicio</a>
+            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/pages/jugadores.html">Jugadores</a>
+            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
@@ -68,22 +50,21 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
+            <a class="nav-link active" href="/pages/profesores.html">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pages/torneos.html">Torneos</a>
         </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Otros
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
               <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
-
+              <li><a class="dropdown-item" href="#">Contacto</a></li>
             </ul>
           </li>
         </ul>
@@ -98,8 +79,8 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
             <i class="bi bi-person-circle display-6"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="/pages/registrarse.html">Registrarse</a></li>
+            <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="#">Registrarse</a></li>
           </ul>
         </div>
         
@@ -109,14 +90,10 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
     </div>
   </nav>
 
-  
-
-  
-
-  <!-- PERFIL JUGADOR -->
+   <!-- PERFIL JUGADOR -->
 
 <main id="jugador-offline">
-  <h1 class="title">JUGADORES</h1>
+  <h1 class="title">PROFESORES</h1>
   <div class="acceso-login">
     <a class="login" href="">Iniciar sesion</a>
     <a class="login" href="">Registrarse</a>
@@ -124,8 +101,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
 </main>
   
 
-
-<!-- CAJA BUSQUEDA -->
+ <!-- CAJA BUSQUEDA -->
 <section>  
   <div class="container">
     <div class="caja-busqueda">
@@ -163,6 +139,8 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
           <div class="col-auto">
             <button type="submit" class="btn btn-primary">Buscar</button>
           </div>
+  
+      
             </div>
           </div>
         </form>
@@ -170,120 +148,105 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
     </div>
   </div>
   </section>
-
-
-
-
-<!-- seccion clubes -->
-<!-- clubes cards -->
-<section class="funciones-jugador">
-  <div class="card main">
-    <div class="circle-icon">
-      <i class="bi bi-graph-up-arrow"></i>
+  
+  <!-- Profes  --> 
+  <section>
+    <div class="container Profesor">
+      <div id="ElegirProfe">
+      <h1>Econtrá el profe a tu medida</h1>
+      </div>
+      <div class="row ">
+        <div class="col-md-4 ">
+          <div class="card  ">
+            <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">            
+            <div class="card-body">
+              <h5 class="card-title">Profe 1</h5>
+              <p class="card-text">Breve descripción del profesor.</p>
+              <div class="contactar">
+                <a href="#"><i class="fa-solid fa-heart"></i></i></a>
+                <a href="#" class="">Más Info</a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Profe 2</h5>
+              <p class="card-text">Breve descripción del profesor.</p>
+              <div class="contactar">
+                <a href="#"><i class="fa-solid fa-heart"></i></i></a>
+                <a href="#" class="">Más Info</a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Profe 3</h5>
+              <p class="card-text">Breve descripción del profesor.</p>
+              <div class="contactar">
+                <a href="#"><i class="fa-solid fa-heart"></i></i></a>
+                <a href="#" class="">Más Info</a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Profe 4</h5>
+              <p class="card-text">Breve descripción del profesor.</p>
+              <div class="contactar">
+                <a href="#"><i class="fa-solid fa-heart"></i></i></a>
+                <a href="#" class="">Más Info</a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>              
+            </div>
+          </div>
+        </div>  
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Profe 5</h5>
+              <p class="card-text">Breve descripción del profesor.</p>
+              <div class="contactar">
+                <a href="#"><i class="fa-solid fa-heart"></i></i></a>
+                <a href="#" class="">Más Info</a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>   
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Profe 6</h5>
+              <p class="card-text">Breve descripción del profesor.</p>
+              <div class="contactar">
+                <a href="#"><i class="fa-solid fa-heart"></i></i></a>
+                <a href="#" class="">Más Info</a>
+                <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>  
     </div> 
-    <div class="info">
-      <h3 class="title">Historial, estadisticas y amigos</h3>
-      <p class="parrafo">Jugá, divertite, ganá y sumá puntos para el Ranking unificado PADEL WORD.</p>
-      <a class="link" href="">VER MAS</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="circle-icon">
-      <i class="bi bi-mortarboard"></i>
-    </div> 
-    <div class="info">
-      <h3 class="title">CLASES</h3>
-      <p class="parrafo">Encontrá profesores de padel en todo el país, administrá tu calendario y coordina con los profesores para tomar clases. </p>
-      <a class="link" href="">VER MAS</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="circle-icon">
-      <i class="bi bi-person"></i>
-    </div> 
-    <div class="info">
-      <h3 class="title">RIVALES</h3>
-      <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A assumenda earum minus modi molestiae rem odit natus architecto cupiditate rerum?</p>
-      <a class="link" href="">VER MAS</a>
-    </div>
-  </div>
-
- 
-  <div class="card">
-    <div class="circle-icon">
-      <i class="bi bi-trophy"></i>
-    </div> 
-    <div class="info">
-      <h3 class="title">TORNEOS</h3>
-      <p class="parrafo">Todos los partidos y torneos que se juegan, están en PADEL WORD. Entrá y conocé las novedades del circuito.</p>
-      <a class="link" href="">VER MAS</a>
-    </div>
-  </div>
+  </section>
 
   
-  <div class="card">
-    <div class="circle-icon">
-      <i class="bi bi-shop"></i>
-    </div> 
-    <div class="info">
-      <h3 class="title">TIENDAS</h3>
-      <p class="parrafo">Encontra los productos que necesites para tus partidos y torneos.</p>
-      <a class="link" href="">VER MAS</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECCION HABILIDADES -->
-<div id="habilidades">
-  <h3>HABILIDADES </h3>
-
-      <div class="skills">
-      <div class="info">
-          <p> <span class="lista"> </span>Saque</p>
-          <span class="porcentaje">75%</span>
-      </div>
-
-      <div class="barra">
-          <div class="" id="html"></div>
-      </div>
-  </div>
-  <div class="skills">
-      <div class="info">
-          <p> <span class="lista"> </span>Reves</p>
-          <span class="porcentaje">60%</span>
-      </div>
-
-      <div class="barra">
-          <div class="" id="js"></div>
-      </div>
-  </div>
-  <div class="skills">
-      <div class="info">
-          <p> <span class="lista"> </span>Derecha</p>
-          <span class="porcentaje">90%</span>
-      </div>
-
-      <div class="barra">
-          <div class="" id="bd"></div>
-      </div>
-  </div>
-  <div class="skills">
-      <div class="info">
-          <p> <span class="lista"> </span>Volea</p>
-          <span class="porcentaje">85%</span>
-      </div>
-
-      <div class="barra">
-          <div class="" id="c#"></div>
-      </div>
-  </div>
-</div>
-
-
-
 <!-- menu jugodores -->
 <section id="menu-jugadores">
   <div class="titulos">
@@ -325,15 +288,87 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
   </div>
 </section>
 
+<!-- Calendario Profesores -->
+
+<div class="containercalendario">
+  <div class="left">
+    <div class="calendar">
+      <div class="month">
+        <i class="fas fa-angle-left prev"></i>
+        <div class="date">december 2015</div>
+        <i class="fas fa-angle-right next"></i>
+      </div>
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div class="days"></div>
+      <div class="goto-today">
+        <div class="goto">
+          <input type="text" placeholder="mm/yyyy" class="date-input" />
+          <button class="goto-btn">Go</button>
+        </div>
+        <button class="today-btn">Today</button>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="today-date">
+      <div class="event-day">wed</div>
+      <div class="event-date">12th december 2022</div>
+    </div>
+    <div class="events"></div>
+    <div class="add-event-wrapper">
+      <div class="add-event-header">
+        <div class="title">Add Event</div>
+        <i class="fas fa-times close"></i>
+      </div>
+      <div class="add-event-body">
+        <div class="add-event-input">
+          <input type="text" placeholder="Event Name" class="event-name" />
+        </div>
+        <div class="add-event-input">
+          <input
+            type="text"
+            placeholder="Event Time From"
+            class="event-time-from"
+          />
+        </div>
+        <div class="add-event-input">
+          <input
+            type="text"
+            placeholder="Event Time To"
+            class="event-time-to"
+          />
+        </div>
+      </div>
+      <div class="add-event-footer">
+        <button class="add-event-btn">Add Event</button>
+      </div>
+    </div>
+  </div>
+  <button class="add-event">
+    <i class="fas fa-plus"></i>
+  </button>
+</div>
+<script src="/js/scrips.js"></script>
+</section>
+
+
+
+
+	
 
 
 
 
 
-
-<!-- SECCION FOOTER -->
-<footer>
-  
+  <!-- SECCION FOOTER -->
   <footer>
     <div class="redes" >
       <p class="footer-parrafo">© PADEL WORLD - Todos los derechos reservados 2023</p>
@@ -342,6 +377,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
         <a href="https://github.com/GeraFernandez" target="_blank" style="display: inline-block;"><i class="bi bi-twitter"></i></a>
     </div>
   </footer>
+
 
     
     <!-- bootstrap js -->

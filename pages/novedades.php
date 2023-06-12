@@ -17,9 +17,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/styles/estilos.css">
+    
 
     
-    <title>Padel World - </title>
+    <title>Padel World - Novedades</title>
+
+
+
+	</style>
+</head>
+
+
 </head>
 <body >
 
@@ -37,7 +45,7 @@
             <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.php">Jugadores</a>
+            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
@@ -86,6 +94,8 @@
     </div>
   </nav>
 
+  
+
 <!--SEC LOGIN -->
   <!-- Section: Design Block -->
   <section class="background-image overflow-hidden">
@@ -93,78 +103,73 @@
   
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
       <div class="row gx-lg-5 align-items-center mb-5">
-        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-            Bienvenido a la red mas grande del mundo <br />
-            <span style="color: hsl(234, 79%, 65%)">PADEL WORLD</span>
-          </h1>
-          <p class="mb-4 opacity-70 texto-login">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Temporibus, expedita iusto veniam atque, magni tempora mollitia
-            dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-            ab ipsum nisi dolorem modi. Quos?
-          </p>
-        </div>
   
-        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-           
-          <div class="bg-glass"> <!-- "card bg-glass"> -->
-            <div class="card-body px-4 py-5 px-md-5">
-              <form action="/pages/jugadores.php" method="post">
+          <div class="card bg-glass">
+            <div class="card-body px-1 py-1 px-md-1">
+              <form>
                 
   
-                <!-- Email input -->
-                <div class="form-outline mb-">
-                  <input type="email" id="form3Example3" class="form-control" name="email" />
-                  <label class="form-label" for="form3Example3">EMAIL</label>
-                </div>
+               
+<!-- menu jugodores -->
+<DIV class="container mt-4">
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Acordeón artículo #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra de forma predeterminada, hasta que el complemento de colapso agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Acordeón artículo #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento de Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Acordeón artículo #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+      </div>
+    </div>
+  </div>
   
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" name="password"/>
-                  <label class="form-label" for="form3Example4">CONTRASEÑA</label>
-                  <a class="ps-5 ms-5 " href="/pages/registrarse.html">Olvidaste la contraseña?</a>
-                </div>
-  
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-left mb-4">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                  <label class="form-check-label" for="form2Example33">
-                    Recordar contraseña
-                  </label>
-                </div>
-  
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  INICIAR SESION
-              </button>
-              <p>
-                  ¿No tienes cuenta aún? 
-                  <a href="/pages/registrarse.html">Regístrate</a>
-              </p>
-              
-  
-                <!-- Register buttons -->
-                <div class="text-center mb-3 mt-5" ><!-- modif con css -->
-                  <p>O iniciar sesion con:</p>
-                  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="bi bi-google"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="bi bi-facebook"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="bi bi-twitter"></i>
-                  </button>
-  
-                </div>
+
+  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+    Acordeón artículo #4
+  </button>
+</h2>
+<div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+  <div class="accordion-body">
+    <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra de forma predeterminada, hasta que el complemento de colapso agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingTwo">
+</div>
+</DIV>
               </form>
             </div>
           </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -189,22 +194,4 @@
       <!-- bootstrap js -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
-
-
-  <?php 
-require_once('config.php');
-$email = $_POST['email'];
-$password = $_POST['password'];
-
-$query = "SELECT * FROM usuarios where correo = '$email' AND password = '$password'";
-$result = $enlace->query($query);
-
-if($result->num_rows > 0){
-  
-  header("Location: /pages/jugadores.php");
-}
-else{
-  header("Location: /pages/registrarse.php");
-}
-?>
   </html>

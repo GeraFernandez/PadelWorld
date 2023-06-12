@@ -17,13 +17,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/styles/estilos.css">
+    
 
     
-    <title>Padel World - </title>
+    <title>Padel World - Sobre Nosotros</title>
+
+
+    
 </head>
 <body >
 
- 
+
   <!-- NAV -->
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
     <div class="container-fluid">
@@ -37,7 +41,7 @@
             <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.php">Jugadores</a>
+            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
@@ -86,98 +90,83 @@
     </div>
   </nav>
 
-<!--SEC LOGIN -->
-  <!-- Section: Design Block -->
-  <section class="background-image overflow-hidden">
+
  
-  
-    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-      <div class="row gx-lg-5 align-items-center mb-5">
-        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-            Bienvenido a la red mas grande del mundo <br />
-            <span style="color: hsl(234, 79%, 65%)">PADEL WORLD</span>
-          </h1>
-          <p class="mb-4 opacity-70 texto-login">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Temporibus, expedita iusto veniam atque, magni tempora mollitia
-            dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-            ab ipsum nisi dolorem modi. Quos?
-          </p>
-        </div>
-  
-        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-           
-          <div class="bg-glass"> <!-- "card bg-glass"> -->
-            <div class="card-body px-4 py-5 px-md-5">
-              <form action="/pages/jugadores.php" method="post">
-                
-  
-                <!-- Email input -->
-                <div class="form-outline mb-">
-                  <input type="email" id="form3Example3" class="form-control" name="email" />
-                  <label class="form-label" for="form3Example3">EMAIL</label>
-                </div>
-  
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4" class="form-control" name="password"/>
-                  <label class="form-label" for="form3Example4">CONTRASEÑA</label>
-                  <a class="ps-5 ms-5 " href="/pages/registrarse.html">Olvidaste la contraseña?</a>
-                </div>
-  
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-left mb-4">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                  <label class="form-check-label" for="form2Example33">
-                    Recordar contraseña
-                  </label>
-                </div>
-  
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  INICIAR SESION
-              </button>
-              <p>
-                  ¿No tienes cuenta aún? 
-                  <a href="/pages/registrarse.html">Regístrate</a>
-              </p>
-              
-  
-                <!-- Register buttons -->
-                <div class="text-center mb-3 mt-5" ><!-- modif con css -->
-                  <p>O iniciar sesion con:</p>
-                  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="bi bi-google"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="bi bi-facebook"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="bi bi-twitter"></i>
-                  </button>
-  
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+ <!-- NOSOTROS -->
+  <main id="nosotros">
+    <h1 class="title-nosotros">NUESTRO EQUIPO</h1>
+  </main>
+    
+
+  <!-- info general -->
+  <section class="info-gral nosotros">
+    <h1 class="title">¿Quienes somos?</h1>
+    <p class="contenido">Somos un grupo de amigos apasionados por el apdel amateur que busca facilitar y mejorar la experiencia en este deporte. Nuestro objetivo es proporcionar recursos, información y herramientas para que los aficionados disfruten al máximo de su práctica. Queremos ser una fuente confiable de información y crear una comunidad en la que los jugadores puedan conectarse y compartir experiencias. Estamos abiertos a comentarios y sugerencias de la comunidad mientras crecemos y nos adaptamos a sus necesidades.</p>
   </section>
-  <!-- Section: Design Block -->
+
+  <!-- NOSOTRSO INFO -->
+<section id="nosotros-info">
+  <div class="fila">
+     
+      <div class="info"> 
+        <div class="circle-icon">
+          <i class="bi bi-person"></i>
+        </div> 
+          <h4>Cecilia Cruz</h4>
+          <h5>35 años. Salsipuedes, Argentina</h5>                   
+          <h6>Co-fundador</h6>
+          <h6>Profesion</h6>
+          <h6>Otro</h6>
+          <div class="redes">
+            <a class="redes-icon" href="https://www.linkedin.com/in/fernandez-christe/" target="_blank"><i class="bi bi-linkedin"></i></a>
+             <a href="https://github.com/GeraFernandez" target="_blank"><i class="bi bi-github"></i></a>
+         </div>
+      </div>
+
+      <div class="info">
+        <div class="circle-icon">
+          <i class="bi bi-person"></i>
+        </div>    
+        <h4>Gerardo Fernandez</h4>
+        <h5>29 años. Cordoba, Argentina</h5>               
+        <h6>Co-fundador</h6>
+        <h6>Analista de sistemas</h6>
+          <h6>Tenista</h6>
+          <div class="redes">
+           <a class="redes-icon" href="https://www.linkedin.com/in/fernandez-christe/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/GeraFernandez" target="_blank"><i class="bi bi-github"></i></a>
+        </div>
+        
+    </div>
+
+    <div class="info">  
+      <div class="circle-icon">
+        <i class="bi bi-person"></i>
+      </div>    
+      <h4>Camila Graziani</h4>
+      <h5>28 años. Corralito, Argentina</h5>  
+      <h6>Co-fundador</h6>
+      <h6>Contadora</h6>
+          <h6>Campesina</h6>
+          <div class="redes">
+            <a class="redes-icon" href="https://www.linkedin.com/in/fernandez-christe/" target="_blank"><i class="bi bi-linkedin"></i></a>
+             <a href="https://github.com/GeraFernandez" target="_blank"><i class="bi bi-github"></i></a>
+         </div>
+        </div>
+  </div>
+
+    </section>
 
 
 
 
 
+  
 
-<!-- SECCION FOOTER -->
-<footer>
-    <div class="redes" >
+
+  <!-- SECCION FOOTER -->
+  <footer>
+    <div class="redes">
       <p class="footer-parrafo">© PADEL WORLD - Todos los derechos reservados 2023</p>
         <a href="https://www.linkedin.com/in/fernandez-christe/" target="_blank" style="display: inline-block;"><i class="bi bi-facebook"></i></a>
         <a href="https://github.com/GeraFernandez" target="_blank" style="display: inline-block;"><i class="bi bi-instagram"></i></a>
@@ -185,26 +174,8 @@
     </div>
   </footer>
 
-      
-      <!-- bootstrap js -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  </body>
-
-
-  <?php 
-require_once('config.php');
-$email = $_POST['email'];
-$password = $_POST['password'];
-
-$query = "SELECT * FROM usuarios where correo = '$email' AND password = '$password'";
-$result = $enlace->query($query);
-
-if($result->num_rows > 0){
-  
-  header("Location: /pages/jugadores.php");
-}
-else{
-  header("Location: /pages/registrarse.php");
-}
-?>
-  </html>
+    
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

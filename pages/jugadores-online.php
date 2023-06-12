@@ -1,3 +1,15 @@
+<?php
+$servidor = "localhost";
+$usuario = "root";
+$clave = "";
+$baseDeDatos = "padelworld";
+
+$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
