@@ -1,16 +1,16 @@
-<!-- <?php
+<?php
 
-$server = "localhost";
-$user = "root";
-$pass = "";
-$db = "test";
+$servidor = "localhost";
+$usuario = "root";
+$clave = "";
+$baseDeDatos = "padelworld";
 
-$conexion = new mysqli($server, $user, $pass, $db);
+$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
 
-if ($conexion->connect_errno) {
-    die("Conexion fallida" .  $conexion->connect_errno);
+if ($enlance->connect_errno) {
+    die("Conexion fallida" .  $enlace->connect_errno);
 } else {
     echo "conectado";
 }
 
-?> -->
+?> 
