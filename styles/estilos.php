@@ -1,5 +1,8 @@
 /* ----------------------------------------------------ESTRUCTURA PRINCIPAL ---------------------------------------------- */
+<?php
+header("Content-Type: text/css; charset: UTF-8");
 
+?>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 * {
     margin: 0;
@@ -80,7 +83,7 @@ footer a {
     padding: 15px 15px;
     text-align: center;
     background-color: #f3f3f3;
-    background: linear-gradient(to bottom, rgba(226, 85, 85, 0.9), rgba(0, 0, 0, 0.9)), url("../img/funcionalidades.png");
+    background: linear-gradient(to bottom, rgba(226, 85, 85, 0.9), rgba(0, 0, 0, 0.9)), url("/img/funcionalidades.png");
     background-size: cover;
     background-position: center center;
 }
@@ -223,7 +226,7 @@ footer a {
 
 /*---------------------------- PAGINA LOGIN------------------------------------- */
 .background-image {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.363),  rgba(5, 4, 56, 0.662)), url("../img/fondo-login.png");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.363),  rgba(5, 4, 56, 0.662)), url("/img/fondo-login.png");
     background-size: cover;
     
   }
@@ -246,7 +249,7 @@ body{
 
 /* jugadores - cabecera */
 #jugador-offline{
-  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("../img/fondo-jugadoresss.png");
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-jugadoresss.png");
   background-size: cover;
   height: 400px;
   background-color: blue;
@@ -351,7 +354,7 @@ body{
    
         
 #habilidades {
-  background: linear-gradient( #eb5a5acc, rgba(33, 16, 16, 0.8)), url("../img/A.PNG");
+  background: linear-gradient( #eb5a5acc, rgba(33, 16, 16, 0.8)), url("/img/A.PNG");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -514,7 +517,7 @@ background-color: rgba(220,220,220,255);
 /* CLUBES - cabecera */
 /* jugadores - cabecera */
 #club-offline{
-  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("../img/fondo-club.png");
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-club.png");
   background-size: cover;
   height: 400px;
   background-color: blue;
@@ -680,7 +683,7 @@ background-color: rgba(220,220,220,255);
 
 /* torneo - cabecera */
 #torneo-offline{
-  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("../img/fondo-torneos.png");
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-torneos.png");
   background-size: cover;
   height: 400px;
   background-color: blue;
@@ -883,7 +886,7 @@ text-align: center;
 }
 
 #nosotros{
-  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("../img/fondo-nosotros.png");
+  background: linear-gradient(to bottom, rgb(5, 4, 56),  rgba(5, 4, 56, 0.662)), url("/img/fondo-nosotros.png");
   background-size: cover;
   height: 400px;
   background-color: blue;
@@ -949,7 +952,7 @@ text-align: center;
   padding: 15px 15px;
   text-align: center;
   background-color: #f3f3f3;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)), url("../img/fondo-padel.jpg");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)), url("/img/fondo-padel.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -1136,7 +1139,7 @@ line-height: 22px;
 }
 .calendar .month .prev:hover,
 .calendar .month .next:hover {
-    color: rgb(23, 23, 114);
+    color: var(--primary-clr);
 }
 .calendar .weekdays {
     width: 100%;
@@ -1189,8 +1192,8 @@ line-height: 22px;
     border-bottom: 2px solid #f5f5f5;
 }
 .calendar .days .day:not(.prev-date, .next-date):hover {
-    color: rgb(23, 23, 114);
-    background-color: rgb(201, 201, 201);
+    color: #fff;
+    background-color: var(--primary-clr);
 }
 .calendar .days .prev-date,
 .calendar .days .next-date {
@@ -1505,17 +1508,16 @@ line-height: 22px;
     font-weight: 500;
     outline: none;
     border: none;
-    color: #ececec;
-    background-color: grey;
+    color: #fff;
+    background-color: var(--primary-clr);
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 10px;
     border: 1px solid var(--primary-clr);
 }
 .add-event-footer .add-event-btn:hover {
-    background-color: rgb(64, 75, 133);
-    color: rgb(251, 251, 253);
-    border-color: #333333d5;
+    background-color: transparent;
+    color: var(--primary-clr);
 }
 
   /* media queries */

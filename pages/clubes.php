@@ -16,7 +16,7 @@
     <!-- bootsrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/styles/estilos.css">
+    <link rel="stylesheet" href="../styles/estilos.css">
     
 
     
@@ -38,7 +38,7 @@
   <!-- NAV -->
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
+      <a class="navbar-brand" href="#"><img src="../img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,15 +48,15 @@
             <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
+            <a class="nav-link" href="../pages/jugadores.php">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/pages/clubes.html">Clubes</a>
+          <a class="nav-link active" href="../pages/clubes.php">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
+            <a class="nav-link" href="/pages/profesores.php">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
