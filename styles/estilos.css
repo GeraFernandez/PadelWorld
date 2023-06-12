@@ -794,15 +794,31 @@ text-align: center;
 }
 
 #torneos-funcionalidades .imagen img{
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 
 
+#torneos-funcionalidades .funciones{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 20px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: center;
+
+
+}
+
 #torneos-funcionalidades .tarjetas{
+  justify-items: center;
   border: #000;
   background-color: white; 
   border-radius: 20px;
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  padding: 5px;
 
 }
 
@@ -817,7 +833,6 @@ text-align: center;
 
 #torneos-funcionalidades .tarjetas h2{
   color: red;
-  margin-bottom: 10px;
   font-size: 20px;
   margin: 5px auto 10px auto;
   
