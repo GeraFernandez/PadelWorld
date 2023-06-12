@@ -9,9 +9,6 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -126,7 +123,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
   
           <div class="bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form action="#" name="padelword" method="post">
+              <form action="#" name="padelworld" method="post">
 
                   <!-- NOMBRE input -->
                   <div class="form-outline mb-3">
@@ -141,6 +138,14 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
                  
                 </div>
 
+                
+                <!-- Email input -->
+                <div class="form-outline mb-3">
+                  <label class="form-label" for="form3Example3">EMAIL</label>
+                  <input type="email"  name="correo" id="form3Example3" class="form-control" placeholder="ejemplo@gmail.com" />
+                
+                </div>
+
                <!-- Telefono input -->
                 <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example3">Telefono</label>
@@ -148,23 +153,17 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
                 
                 </div>
   
-                <!-- Email input -->
-                <div class="form-outline mb-3">
-                  <label class="form-label" for="form3Example3">EMAIL</label>
-                  <input type="email"  name="correo" id="form3Example3" class="form-control" placeholder="ejemplo@gmail.com" />
-                
-                </div>
   
                 <!-- Password input -->
                 <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example4">CONTRASEÑA</label>
-                  <input type="password" name="password" id="form3Example4" class="form-control" placeholder="Minimo 8 caracteres" />
+                  <input type="password" name="password" id="form3Example4" class="form-control" placeholder="Maximo 8 caracteres" />
                 </div>
 
                  <!-- Password input -->
                  <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example4">REPETIR CONTRASEÑA</label>
-                  <input type="password" id="form3Example4" class="form-control" placeholder="Minimo 8 caracteres" />                  
+                  <input type="password" id="form3Example4" class="form-control" placeholder="Maximo 8 caracteres" />                  
                 </div>
   
                 <!-- Checkbox -->
@@ -181,7 +180,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
             
                 <p>
                   ¿Ya tienes cuenta? 
-                  <a href="/pages/login.html">Iniciar sesion</a>
+                  <a href="/pages/login.php">Iniciar sesion</a>
                 </p>
               
   
@@ -234,20 +233,21 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
 
   <?php
 
-if(isset($_POST['registro'])){
- $correo= $_POST['correo'];
- $password= $_POST['password'];
- $telefono= $_POST['telefono'];
- $nombre= $_POST['nombre'];
- $apellido= $_POST['apellido'];
+  if(isset($_POST['registro'])){
+  $nombre= $_POST['nombre'];
+  $apellido= $_POST['apellido'];
+  $correo= $_POST['correo'];
+  $telefono= $_POST['telefono'];
+  $password= $_POST['password'];
+ 
+
  
  
       
 
-$insertarDatos = "INSERT INTO usuarios VALUES ('$correo', '$password', '$telefono', '$nombre', '$apellido')";
+$insertarDatos = "INSERT INTO usuarios VALUES ('','$nombre', '$apellido','$correo','$telefono', '$password')";
 $ejecutarInsertar= mysqli_query($enlace, $insertarDatos);
 }
 ?>
 
-
-  </html>
+</html>
