@@ -45,30 +45,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><!-- modif agregar links a paginas -->
-            <a class="nav-link" aria-current="page" href="/index.php">Inicio</a>
+            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.php">Jugadores</a>
+            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/pages/clubes.php">Clubes</a>
+          <a class="nav-link active" href="/pages/clubes.html">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/profesores.php">Profesores</a>
+            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/torneos.php">Torneos</a>
+          <a class="nav-link" href="/pages/torneos.html">Torneos</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Otros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/pages/novedades.php">Novedades</a></li>
-              <li><a class="dropdown-item" href="/pages/sobre-nosotros.php">Sobre nosotros</a></li>
+              <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
+              <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
 
@@ -86,8 +86,8 @@
             <i class="bi bi-person-circle display-6"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/pages/login.php">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="/pages/registrarse.php">Registrarse</a></li>
+            <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="/pages/registrarse.html">Registrarse</a></li>
           </ul>
         </div>
         
@@ -233,12 +233,12 @@
   <div class="tarjetas">
     <div class="card">
       <div class="foto">
-        <img src="/img/A.PNG" alt="" srcset="">
+        <img src="/img/club1.png" alt="" srcset="">
        </div> 
       <div class="info">
         <div class="title">
            <h3>CLUB TELEFONOS PADEL</h3>
-           <h3 class="star">5.0 <i class="bi bi-star-fill"></i></h3>
+           <h3 class="star">4.6 <i class="bi bi-star-fill"></i></h3>
         </div>
         <h5> <i class="bi bi-geo-alt"></i> Av. Fernando Fader 4535 , Cordoba</h5>
         <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>
@@ -263,12 +263,12 @@
 
     <div class="card">
       <div class="foto">
-        <img src="/img/pxfuel (12).jpg" alt="" srcset="">
+        <img src="/img/club3.png" alt="" srcset="">
        </div> 
       <div class="info">
         <div class="title">
            <h3>LES COURTS</h3>
-           <h3 class="star">5.0 <i class="bi bi-star-fill"></i></h3>
+           <h3 class="star">4.1 <i class="bi bi-star-fill"></i></h3>
         </div>
         <h5> <i class="bi bi-geo-alt"></i> Av. Goycoechea 2013 , Cordoba</h5>
         <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>
@@ -278,7 +278,7 @@
 
     <div class="card">
       <div class="foto">
-        <img src="/img/A.PNG" alt="" srcset="">
+        <img src="/img/club6.png" alt="" srcset="">
        </div> 
       <div class="info">
         <div class="title">
@@ -293,12 +293,12 @@
 
     <div class="card">
       <div class="foto">
-        <img src="/img/A.PNG" alt="" srcset="">
+        <img src="/img/club5.png"alt="" srcset="">
        </div> 
       <div class="info">
         <div class="title">
            <h3>PADEL BOX</h3>
-           <h3 class="star">5.0 <i class="bi bi-star-fill"></i></h3>
+           <h3 class="star">3.1 <i class="bi bi-star-fill"></i></h3>
         </div>
         <h5> <i class="bi bi-geo-alt"></i> Caseros 1727, Cordoba</h5>
         <h4> <i class="bi bi-telephone"></i> 351 - 4765430</h4>

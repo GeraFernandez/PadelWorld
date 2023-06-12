@@ -33,22 +33,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><!-- modif agregar links a paginas -->
-            <a class="nav-link" aria-current="page" href="/index.php">Inicio</a>
+            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.php">Jugadores</a>
+            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/clubes.php">Clubes</a>
+          <a class="nav-link" href="/pages/clubes.html">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/profesores.php">Profesores</a>
+            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/pages/torneos.php">Torneos</a>
+          <a class="nav-link active" href="/pages/torneos.html">Torneos</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,8 +74,8 @@
             <i class="bi bi-person-circle display-6"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/pages/login.php">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="/pages/registrarse.php">Registrarse</a></li>
+            <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="/pages/registrarse.html">Registrarse</a></li>
           </ul>
         </div>
         
@@ -113,39 +113,54 @@
   </section>
     
 
- <!-- SECCION FUNCIONALIDADES PRINCIPALES -->
+<!--   SECCION FUNCIONALIDADES PRINCIPALES -->
 <section id="torneos-funcionalidades">
-  <div class="funciones uno ">
-
-    <h2>Cuadros automáticos</h2>
-    <p>Generá los cuadros de tus torneos automáticamente: ligas todo contra todos o torneo por zonas o eliminacion directa</p>
-  </div>
-
-
-  <div class="funciones dos">
-    <h2>Calendario de partidos</h2>
-    <p>Todos los partidos de tu Circuito disponibles en PADEL WORD, tus torneos al alcance de todos..</p>
-
+  <div class="imagen">
+     <img src="/img/torneos-func.png" alt="">
   </div>
 
   <div class="funciones">
-    <h2>Alertas y Notificaciones</h2>
-    <p>Notificaciones para jugadores de próximos partidos, noticias del circuito, nuevas etapas, etc.</p>
-  </div>
-
-  <div class="funciones">
-    <h2>Inscripción Online</h2>
-    <p>Los jugadores pueden subir sus resultados a través de nuestra aplicación móvil.</p>
     
+    <div class="tarjetas">
+      <div class="circle-icon">
+        <i class="bi bi-magic"></i>
+      </div> 
+      <h2>Cuadros automáticos</h2>
+      <p>Generá los cuadros de tus torneos automáticamente: ligas todo contra todos o torneo por zonas o eliminacion directa</p>
+    </div>
+
+  
+    <div class="tarjetas">
+      <div class="circle-icon">
+        <i class="bi bi-calendar-range-fill"></i>
+      </div> 
+      <h2>Calendario de partidos</h2>
+      <p>Todos los partidos de tu Circuito disponibles en PADEL WORD, tus torneos al alcance de todos.</p>
+    </div>
+
+
+    <div class="tarjetas">
+      <div class="circle-icon">
+        <i class="bi bi-bell-fill"></i>
+      </div> 
+  
+      <h2>Alertas y Notificaciones</h2>
+      <p>Notificaciones para jugadores de próximos partidos, noticias del circuito, nuevas etapas y mucho mas. </p>
+    </div>
+
+
+    <div class="tarjetas">
+      <div class="circle-icon">
+        <i class="bi bi-pencil-fill"></i>
+      </div> 
+      <h2>Inscripción Online</h2>
+      <p>Los jugadores pueden subir sus resultados a través de nuestra aplicación móvil.</p>
+     </div>
   </div>
-
-
-
-</section>
+</section> 
 
  
          
-
    
 
   <!-- SECCION FOOTER -->

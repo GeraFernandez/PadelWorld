@@ -116,12 +116,12 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Acordeón artículo #1
+        Nuevo sistema de reservas en línea:
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra de forma predeterminada, hasta que el complemento de colapso agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        <strong>¡Reserva canchas en línea fácilmente!</strong> Estamos emocionados de anunciar el lanzamiento de nuestro nuevo sistema de reservas en línea. Ahora puedes reservar canchas de pádel de manera rápida y sencilla directamente desde nuestro sitio web. Simplemente selecciona la fecha, hora y duración deseada, y asegura tu espacio para disfrutar del pádel con amigos. ¡Haz clic aquí para probarlo ahora mismo!
       </div>
     </div>
   </div>
@@ -129,36 +129,36 @@
     <h2 class="accordion-header" id="headingTwo">
       
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Acordeón artículo #2
+        Integración de perfiles de jugadores:
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento de Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        <strong>Crea tu perfil de jugador y conéctate con otros apasionados del pádel</strong> Queremos ayudarte a encontrar rivales afines y construir una comunidad sólida de jugadores de pádel. Ahora, puedes crear tu propio perfil de jugador en nuestro sitio web. Completa tu información personal, incluyendo tu nivel de juego, foto y estadísticas. Conéctate con otros jugadores, encuentra compañeros de juego y mantente al tanto de los desafíos locales. ¡Regístrate ahora para formar parte de nuestra creciente comunidad de pádel!
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Acordeón artículo #3
+        Calendario de eventos y competiciones:
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto de manera predeterminada, hasta que el complemento Collapse agregue las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        <strong>Descubre emocionantes torneos y eventos de pádel en tu área.</strong> Nos complace presentar nuestro nuevo calendario de eventos y competiciones. Mantente al tanto de los próximos torneos, ligas y clinics que se llevarán a cabo cerca de ti. Consulta las fechas, categorías y toda la información necesaria para inscribirte. Ya seas un jugador experimentado o estés comenzando, encontrarás oportunidades para competir y mejorar tus habilidades en el pádel. ¡Explora nuestro calendario ahora mismo y prepárate para la acción!
       </div>
     </div>
   </div>
   
 
   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-    Acordeón artículo #4
+    Implementación de un blog de consejos y noticias (PROXIMAMENTE)
   </button>
 </h2>
 <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
   <div class="accordion-body">
-    <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra de forma predeterminada, hasta que el complemento de colapso agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+    <strong> Mantente informado y mejora tu juego con nuestro blog de pádel.</strong>  ¡Damos la bienvenida a nuestro nuevo blog de pádel! Aquí encontrarás una variedad de artículos que cubren consejos prácticos, noticias relevantes y entrevistas exclusivas con expertos en el pádel. Nuestro objetivo es proporcionarte contenido valioso que te ayude a mejorar tu juego, conocer las últimas tendencias y estar al tanto de lo que sucede en el mundo del pádel. ¡Visita nuestro blog regularmente para mantenerte informado y unirte a la conversación!
   </div>
 </div>
 </div>
