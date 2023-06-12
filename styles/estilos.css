@@ -780,24 +780,33 @@ text-align: center;
 /* funcionalidades */
 #torneos-funcionalidades{
   max-width: 1100px;
-  display: grid ;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 150px 200px;
+  display: flex ;
+  flex-direction: row;
   gap: 10px;
-
-}
-
-#torneos-funcionalidades .funciones{
-  border: #000;
-  padding: 5px;
-  background-color: white; 
-  display: grid;
-  grid-template-rows: 1fr 3fr;
-  border-radius: 20px;
+  justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 
-#torneos-funcionalidades .funciones:hover{
+#torneos-funcionalidades .imagen{
+  width: 800px;
+  height: 300px;
+}
+
+#torneos-funcionalidades .imagen img{
+  width: 100%;
+  height: 100%;
+}
+
+
+#torneos-funcionalidades .tarjetas{
+  border: #000;
+  background-color: white; 
+  border-radius: 20px;
+
+}
+
+#torneos-funcionalidades .tarjetas:hover{
   background-color: blue; 
   box-shadow: 5px 5px 10px #080808, -5px -5px 10px #8a8a8a;
   color: white;
@@ -806,7 +815,7 @@ text-align: center;
 
 
 
-#torneos-funcionalidades .funciones h2{
+#torneos-funcionalidades .tarjetas h2{
   color: red;
   margin-bottom: 10px;
   font-size: 20px;
@@ -814,7 +823,7 @@ text-align: center;
   
 }
 
-#torneos-funcionalidades .funciones p{
+#torneos-funcionalidades .tarjetas p{
   margin-right: 25px;
   font-size: 15px;
   margin: 15px 30px 15px 30px;
@@ -823,27 +832,7 @@ text-align: center;
 }
 
 
- #torneos-funcionalidades .funciones.uno{
-  grid-column: 1/3;
-  grid-row: 1/2;
-  margin-top: 20px;
-
-}
-#torneos-funcionalidades .funciones.dos{
-  grid-row: 1/3;
-  margin-top: 20px;
-}
-
-#torneos-funcionalidades .funciones.tres{
-  grid-column: 2/4;
-  grid-row: 3/4;
-}
-
-
 /* JUGADORES - tarjetas */
-
-
-
 .funciones-jugador .info{
   display: grid;
   grid-template-rows: 1fr 4fr 1fr  ;
