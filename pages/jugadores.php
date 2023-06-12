@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-    <link rel="shortcut icon" href="/img/logo-pelota.png">
+    <link rel="shortcut icon" href="../img/logo-pelota.png">
 
    <!-- iconos -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
   <!-- NAV -->
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
+      <a class="navbar-brand" href="#"><img src="../img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,27 +47,27 @@
             <a class="nav-link " aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/pages/jugadores.html">Jugadores</a>
+            <a class="nav-link active" href="../pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/clubes.html">Clubes</a>
+          <a class="nav-link" href="../pages/clubes.html">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
+            <a class="nav-link" href="../pages/profesores.html">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/torneos.html">Torneos</a>
+          <a class="nav-link" href="../pages/torneos.html">Torneos</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Otros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
-              <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
+              <li><a class="dropdown-item" href="../pages/novedades.html">Novedades</a></li>
+              <li><a class="dropdown-item" href="../pages/sobre-nosotros.html">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
 
@@ -85,8 +85,8 @@
             <i class="bi bi-person-circle display-6"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="/pages/registrarse.html">Registrarse</a></li>
+            <li><a class="dropdown-item" href="../pages/login.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="../pages/registrarse.html">Registrarse</a></li>
           </ul>
         </div>
         
