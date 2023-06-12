@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-    <link rel="shortcut icon" href="/img/logo-pelota.png">
+    <link rel="shortcut icon" href="../img/logo-pelota.png">
 
    <!-- iconos -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -26,37 +26,37 @@
   <!-- NAV -->
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
+      <a class="navbar-brand" href="#"><img src="../img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><!-- modif agregar links a paginas -->
-            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+            <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
+            <a class="nav-link" href="../pages/jugadores.php">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/clubes.html">Clubes</a>
+          <a class="nav-link" href="../pages/clubes.php">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
+            <a class="nav-link" href="../pages/profesores.php">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/pages/torneos.html">Torneos</a>
+          <a class="nav-link active" href="../pages/torneos.php">Torneos</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Otros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
-              <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
+              <li><a class="dropdown-item" href="../pages/novedades.php">Novedades</a></li>
+              <li><a class="dropdown-item" href="../pages/sobre-nosotros.php">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
 
@@ -74,8 +74,8 @@
             <i class="bi bi-person-circle display-6"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/pages/login.html">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="/pages/registrarse.html">Registrarse</a></li>
+            <li><a class="dropdown-item" href="../pages/login.php">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="../pages/registrarse.php">Registrarse</a></li>
           </ul>
         </div>
         
@@ -101,14 +101,14 @@
 </main>
 
   <section class="galeria">
-    <img src="/img/TORNEOS1.PNG" alt="">
-    <img src="/img/TORNEOS2.PNG" alt="">
-    <img src="/img/TORNEOS3.PNG" alt="">
-    <img src="/img/TORNEOS4.PNG" alt="">
-    <img src="/img/TORNEOS5.PNG" alt="">
-    <img src="/img/TORNEOS6.PNG" alt="">
-    <img src="/img/TORNEOS7.PNG" alt="">
-    <img src="/img/TORNEOS8.PNG" alt="">
+    <img src="../img/TORNEOS1.PNG" alt="">
+    <img src="../img/TORNEOS2.PNG" alt="">
+    <img src="../img/TORNEOS3.PNG" alt="">
+    <img src="../img/TORNEOS4.PNG" alt="">
+    <img src="../img/TORNEOS5.PNG" alt="">
+    <img src="../img/TORNEOS6.PNG" alt="">
+    <img src="../img/TORNEOS7.PNG" alt="">
+    <img src="../img/TORNEOS8.PNG" alt="">
 
   </section>
     
@@ -116,7 +116,7 @@
 <!--   SECCION FUNCIONALIDADES PRINCIPALES -->
 <section id="torneos-funcionalidades">
   <div class="imagen">
-     <img src="/img/torneos-func.png" alt="">
+     <img src="../img/torneos-func.png" alt="">
   </div>
 
   <div class="funciones">
