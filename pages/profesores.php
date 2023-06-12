@@ -262,31 +262,37 @@
   
   <section id="misreservas">
     <h3 class="title" >MIS RESERVAS</h3>
-    <p></p>
+    <p>Gestiona tus reserva de turnos, dias y horarios.</p> 
+      <p>INICIA SESION PARA VER TU INFORMACION PERSONALIZADA</p>
   </section>
 
   <section id="mistorneos">
     <h3 class="title">MIS TORNEOS</h3>
-    <p>Resultados en tiempo real, analisis de rivales, actualizá tu propio score, accedé a los rankings y mucho más</p>
+    <p>Resultados en tiempo real, analisis de rivales, actualizá tu propio score, accedé a los rankings y mucho más. </p>
+    <p>INICIA SESION PARA VER TU INFORMACION PERSONALIZADA</p>
   </section>
 
   <section id="misclases">
     <h3 class="title">MIS CLASES</h3>
-    <p>Encontrá profesores de tenis en todo el país, administrá tu calendario.</p>
+    <p>Encontrá profesores de tenis en todo el país, administrá tu calendario. </p>
+    <p>INICIA SESION PARA VER TU INFORMACION PERSONALIZADA</p>
   </section>
 
   <section id="amigos">
     <h3 class="title">AMIGOS</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+    <p>Conecta con amigos y busca rivales, avisales cuando quieras jugar e invitalos a tus partidos</p>
+    <p>INICIA SESION PARA VER TU INFORMACION PERSONALIZADA</p>
   </section>
 
   <section id="pagos">
     <h3 class="title">METODOS DE PAGO</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit harum expedita assumenda exercitationem sit molestiae. Eos tempora optio vero illum repudiandae, culpa voluptas autem laboriosam aperiam ex quasi ipsam quaerat.</p>
+    <p>Administra tus medios de pago de la formas mas segura.</p>
+    <p>INICIA SESION PARA VER TU INFORMACION PERSONALIZADA</p>
   </section>
     </div>
   </div>
 </section>
+
 
 <!-- Calendario Profesores -->
 
