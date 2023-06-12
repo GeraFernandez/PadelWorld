@@ -1136,7 +1136,7 @@ line-height: 22px;
 }
 .calendar .month .prev:hover,
 .calendar .month .next:hover {
-    color: var(--primary-clr);
+    color: rgb(23, 23, 114);
 }
 .calendar .weekdays {
     width: 100%;
@@ -1189,8 +1189,8 @@ line-height: 22px;
     border-bottom: 2px solid #f5f5f5;
 }
 .calendar .days .day:not(.prev-date, .next-date):hover {
-    color: #fff;
-    background-color: var(--primary-clr);
+    color: rgb(23, 23, 114);
+    background-color: rgb(201, 201, 201);
 }
 .calendar .days .prev-date,
 .calendar .days .next-date {
@@ -1505,16 +1505,17 @@ line-height: 22px;
     font-weight: 500;
     outline: none;
     border: none;
-    color: #fff;
-    background-color: var(--primary-clr);
+    color: #ececec;
+    background-color: grey;
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 10px;
     border: 1px solid var(--primary-clr);
 }
 .add-event-footer .add-event-btn:hover {
-    background-color: transparent;
-    color: var(--primary-clr);
+    background-color: rgb(64, 75, 133);
+    color: rgb(251, 251, 253);
+    border-color: #333333d5;
 }
 
   /* media queries */
