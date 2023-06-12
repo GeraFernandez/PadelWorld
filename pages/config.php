@@ -1,12 +1,12 @@
 <?php 
-$host = "localhost";
-$user = "root";
-$password = "";
-$db = "padelworld";
+$servidor = "localhost";
+$usuario = "root";
+$clave = "";
+$baseDeDatos = "padelworld";
 
-$conexion = new mysqli($host, $user, $password, $db);
+$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
 
-if($conexion->connect_errno){
-  echo "Falló la conexión a la base de datos " . $conexion->connect_error;
+if($enlace->connect_errno){
+  echo "Falló la conexión a la base de datos " . $enlace->connect_error;
 }
 ?>

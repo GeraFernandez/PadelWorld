@@ -1,19 +1,4 @@
 
-<?php 
-require_once('config.php');
-$email = $_POST['email'];
-$password = $_POST['password'];
-
-$query = "SELECT * FROM usuarios where correo = '$email' AND password = '$password'";
-$result = $conexion->query($query);
-
-if($result->num_rows > 0){
-  
-  header("Location: /pages/jugadores-online.php");
-}else{
-  header("Location: /pages/registrarse.php");
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +39,7 @@ if($result->num_rows > 0){
             <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
+            <a class="nav-link" href="/pages/jugadores.php">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
@@ -127,7 +112,7 @@ if($result->num_rows > 0){
            
           <div class="bg-glass"> <!-- "card bg-glass"> -->
             <div class="card-body px-4 py-5 px-md-5">
-              <form action="/pages/jugadores-online.php" method="post">
+              <form action="/pages/jugadores.php" method="post">
                 
   
                 <!-- Email input -->
@@ -206,4 +191,22 @@ if($result->num_rows > 0){
       <!-- bootstrap js -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
+
+
+  <?php 
+require_once('config.php');
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+$query = "SELECT * FROM usuarios where correo = '$email' AND password = '$password'";
+$result = $enlace->query($query);
+
+if($result->num_rows > 0){
+  
+  header("Location: /pages/jugadores.php");
+}
+else{
+  header("Location: /pages/registrarse.php");
+}
+?>
   </html>
