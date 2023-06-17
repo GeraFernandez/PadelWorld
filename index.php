@@ -1,15 +1,13 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-    <link rel="shortcut icon" href="../img/logo-pelota.png">
+    <link rel="shortcut icon" href="/img/logo-pelota.png">
 
    <!-- iconos -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -18,10 +16,10 @@
     <!-- bootsrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./styles/estilos.css">
+    <link rel="stylesheet" href="../styles/estilos.css">
 
     
-    <title>Padel World - Registro  </title>
+    <title>Padel World</title>
 </head>
 <body >
 
@@ -35,30 +33,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><!-- modif agregar links a paginas -->
-            <a class="nav-link active" aria-current="page" href="./index.php">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/jugadores.php">Jugadores</a>
+            <a class="nav-link" href="../pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./pages/clubes.php">Clubes</a>
+          <a class="nav-link" href="../pages/clubes.html">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/profesores.php">Profesores</a>
+            <a class="nav-link" href="../pages/profesores.html">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./pages/torneos.php">Torneos</a>
+          <a class="nav-link" href="../pages/torneos.html">Torneos</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Otros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./pages/novedades.php">Novedades</a></li>
-              <li><a class="dropdown-item" href="./pages/sobre-nosotros.php">Sobre nosotros</a></li>
+              <li><a class="dropdown-item" href="../pages/novedades.html">Novedades</a></li>
+              <li><a class="dropdown-item" href="../pages/sobre-nosotros.html">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
 
@@ -76,8 +74,8 @@
             <i class="bi bi-person-circle display-6"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="./pages/login.php">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="./pages/registrarse.php">Registrarse</a></li>
+            <li><a class="dropdown-item" href="../pages/login.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="../pages/registrarse.php">Registrarse</a></li>
           </ul>
         </div>
         
@@ -98,20 +96,20 @@
     </div><!-- modif ver transiciones -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./img/fondo-padel2.jpg" class="d-block w-100 " alt="carousel1"> <!-- MODIF ver aca para ajustar responsive -->
+        <img src="../img/fondo-padel2.jpg" class="d-block w-100 " alt="carousel1"> <!-- MODIF ver aca para ajustar responsive -->
         <div class="carousel-caption ">
-          <h5 class="carousel-title">Organización de torneos, Gestion y reservas de turnos, Profesores y Prestadores de Servicios de padel.</h5>
+          <h5 class="carousel-title">BIENVENIDO A PADEL WORLD, encontra padel de Argentina</h5>
           </div>
       
       </div>
       <div class="carousel-item">
-        <img src="./img/agenda-world-padel-tour-2023.jpg" class=" w-100" alt="carousel2">
+        <img src="../img/agenda-world-padel-tour-2023.jpg" class=" w-100" alt="carousel2">
         <div class="carousel-caption d-none d-md-block">
-          <h5 class="carousel-title">Organización de torneos, Gestion y reservas de turnos, Profesores y Prestadores de Servicios de padel.</h5>
+          <h5 class="carousel-title">Busca amigos y rivales de todas las categorias.</h5>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="./img/pxfuel.jpg" class="d-block w-100" alt="carousel3">
+        <img src="../img/pxfuel.jpg" class="d-block w-100" alt="carousel3">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="carousel-title">Organización de torneos, Gestion y reservas de turnos, Profesores y Prestadores de Servicios de padel.</h5>
         </div>
@@ -188,7 +186,7 @@
           <div class="circle-icon">
             <i class="bi bi-geo-alt-fill"></i>
           </div>           
-          <p></p>
+          <p>Con PADEL WORLD Explora una variedad de clubes de pádel en tu área, donde puedes alquilar canchas para disfrutar del emocionante juego con amigos y mejorar tus habilidades. Encuentra el lugar perfecto para practicar y divertirte en el mundo del pádel. ¡Reserva tu cancha hoy mismo y sumérgete en la acción!</p>
       </div>
 
       <div class="funcionalidades">
@@ -196,7 +194,7 @@
         <div class="circle-icon">
           <i class="bi bi-mortarboard-fill"></i>
         </div>        
-        <p>PADEL WORD te brinda herramientas para que puedas automatizar la gestión de tus clases de padel. Encontrá profesores de padel en todo el país y administrá tu calendario.</p>
+        <p>Con PADEL WORLD, encuentra profesores de pádel en todo el país y administra fácilmente tu calendario. Automatiza el proceso de reserva, mantén un registro organizado de tus clases y aprovecha al máximo tu tiempo en la cancha. Descubre una nueva forma eficiente de llevar tu pasión por el pádel al siguiente nivel.</p>
     </div>
 
     <div class="funcionalidades">
@@ -204,7 +202,7 @@
       <div class="circle-icon">
         <i class="bi bi-trophy-fill"></i>
       </div>          
-      <p<p>PADEL te ayuda a centralizar la gestión de tus torneos en un solo lugar. Utilizamos los tipos de torneos más comunes pero brindamos la flexibilidad suficiente para que puedas migrar tus torneos a nuestra plataforma rápidamente.</p>
+      <p>¡Organiza torneos de pádel en nuestra web! Regístrate, crea torneos personalizados, gestiona inscripciones, publica horarios y resultados. Conviértete en el anfitrión perfecto y brinda a los jugadores una experiencia de competición emocionante. ¡Únete a nosotros y lleva el pádel a otro nivel!</p>
   </div>
 
   <div class="funcionalidades">
@@ -212,7 +210,7 @@
     <div class="circle-icon">
       <i class="bi bi-shop"></i>
     </div>          
-    <p>Publicá tus productos y servicios en PADEL WORD y expandí tu negocio.</p>
+    <p>¡Descubre el mejor marketplace de pádel en nuestra web! Organiza torneos, compra y vende productos relacionados con el pádel, desde palas y accesorios hasta indumentaria. Únete a nuestra comunidad, encuentra todo lo que necesitas y disfruta al máximo de tu pasión por el pádel. ¡Explora y compra ahora!</p>
     </div>
     </div>
     <div class="fila">
