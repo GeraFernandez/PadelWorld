@@ -2,10 +2,6 @@
 //solicitarla conexion a la base de datos
 
 include './pages/conecta.php';
-
-
-
-
 ?>
 
 

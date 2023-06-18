@@ -1,10 +1,18 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "padelworld";
+//recordar la variable de sesion
+session_start();
+include '../pages/conecta.php';
 
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
+//validamos que haya pasado por el login
+
+$correo=$_SESSION['correo'];
+if(isset($correo)){
+  header("Location: ../pages/login.php");
+}
+
+$consulta ="SELECT * FROM usuarios where correo='$correo'";
+$ejecuta=$conecta->query($consulta);
+$row =$ejecuta->fetch_assoc();
 
 
 ?>
@@ -19,7 +27,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-    <link rel="shortcut icon" href="/img/logo-pelota.png">
+    <link rel="shortcut icon" href="../img/logo-pelota.png">
 
    <!-- iconos -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -49,42 +57,43 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
   <!-- NAV -->
   <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #040738;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
+      <a class="navbar-brand" href="#"><img src="../img/logo-pelota.png" alt="" srcset="" width=" 35px"></a> <!-- modificar con css, cprregir detaslle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><!-- modif agregar links a paginas -->
-            <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/jugadores.html">Jugadores</a>
+            <a class="nav-link" href="../pages/jugadores.php">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/clubes.html">Clubes</a>
+          <a class="nav-link" href="../pages/clubes.php">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/pages/profesores.html">Profesores</a>
+            <a class="nav-link" href="../pages/profesores.php">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/torneos.html">Torneos</a>
+          <a class="nav-link" href="../pages/torneos.php">Torneos</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Otros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/pages/novedades.html">Novedades</a></li>
-              <li><a class="dropdown-item" href="/pages/sobre-nosotros.html">Sobre nosotros</a></li>
+              <li><a class="dropdown-item" href="../pages/novedades.php">Novedades</a></li>
+              <li><a class="dropdown-item" href="../pages/sobre-nosotros.php">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Contacto</a></li>
             </ul>
           </li>
         </ul>
+        <h2><?php echo $correo; ?></h2>
         <form class="d-flex" role="search">
           <input class="form-control me-2 flex-grow-1" type="search" placeholder="Ingrese su busqueda" aria-label="Search">
           <button class="btn btn-danger btn-enviar" type="submit"><i class="bi bi-search"></i></button>         
@@ -94,14 +103,17 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
         <div class="nav-item dropdown ms-3">  <!-- modif consultar profe como hacer con el icono user   -->
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-person-circle display-6"></i>
+            
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
             <li><a class="dropdown-item" href="#">Registrarse</a></li>
+            <li><a class="dropdown-item" href="../pages/cerrarsesion.php">Cerrar Sesion</a></li>   
           </ul>
         </div>
         
-        
+       
+
 
       </div>
     </div>
@@ -122,7 +134,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
                 </div>          
                 <div class="text-center mt-1">
                     <span class="bg-secondary p-1 px-4 rounded text-white">Level 6</span>
-                    <h2 class="mt-2 mb-0">Gerardo Fernandez</h2>               
+                    <h2 class="mt-2 mb-0">kcksdk</h2>               
                     <h6 class="mt-2 mb-0">Cordoba, Argentina</h6>                 
                     <div class="px-3 mt-2">
                         <p class="fonts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam suscipit, unde accusantium natus praesentium similique corrupti eligendi error quaerat, quia necessitatibus! Magnam, quia ad sequi nulla doloremque nihil animi debitis expedita. Quis minus rerum harum in quisquam enim cum..</p>

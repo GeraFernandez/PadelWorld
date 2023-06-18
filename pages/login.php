@@ -30,7 +30,7 @@ if(isset($ruser) && isset($rpassword)){
 if($ruser==$userok && $rpassword==$passwordok) {
   $_SESSION['login']=TRUE;
   $_SESSION['correo']=$correo;
-  header("Location: ../pages/jugadores.php");
+  header("Location: ../pages/jugadores-online.php");
 }
 else{
   $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
