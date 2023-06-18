@@ -474,3 +474,67 @@ function convertTime(time) {
   time = timeHour + ":" + timeMin + " " + timeFormat;
   return time;
 }
+
+
+
+/* Registro VALiDADOR */
+/* const nombre = document.getElementById("nombre")
+const apellido = document.getElementById("apellido")
+const email = document.getElementById("nombre")
+const form = document.getElementById("form")
+const warnings = document.getElementById("warnings")
+
+form.addEventListener("submit", e=>{
+  e.preventDefault()
+  let warnings = ""
+  if(nombre.Value.length < 3){
+    warnings = 'Nombre muy corto'
+  }
+}) */
+
+const form = document.getElementById('form');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirm-password');
+const nombreInput = document.getElementById('nombre');
+const apellidoInput = document.getElementById('apellido');
+const warnings = document.getElementById('warnings');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita el envío del formulario
+
+  const password = passwordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
+  const nombre = nombreInput.value;
+  const apellido = apellidoInput.value;
+
+  // Validación de la contraseña
+  if (password !== confirmPassword) {
+    showWarning('Las contraseñas no coinciden');
+    return; // Detiene el proceso de envío del formulario
+  }
+
+  if (password.length < 8) {
+    showWarning('La contraseña debe tener al menos 8 caracteres');
+    return; // Detiene el proceso de envío del formulario
+  }
+
+  // Validación del nombre y apellido
+  const nameRegex = /^[A-Za-z]{3,}$/; // Al menos 3 letras sin números ni caracteres especiales
+
+  if (!nameRegex.test(nombre)) {
+    showWarning('El nombre debe tener al menos 3 letras sin números ni caracteres especiales');
+    return; // Detiene el proceso de envío del formulario
+  }
+
+  if (!nameRegex.test(apellido)) {
+    showWarning('El apellido debe tener al menos 3 letras sin números ni caracteres especiales');
+    return; // Detiene el proceso de envío del formulario
+  }
+
+  // Si la validación es exitosa, puedes enviar el formulario
+  form.submit();
+});
+
+function showWarning(message) {
+  warnings.innerText = message;
+}
