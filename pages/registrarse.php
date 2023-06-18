@@ -246,6 +246,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
       
 
 $insertarDatos = "INSERT INTO usuarios VALUES ('','$nombre', '$apellido','$correo','$telefono', '$password')";
+
 $ejecutarInsertar= mysqli_query($enlace, $insertarDatos);
 }
 ?>
