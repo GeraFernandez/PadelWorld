@@ -105,8 +105,8 @@
 <main id="jugador-offline">
   <h1 class="title">JUGADORES</h1>
   <div class="acceso-login">
-    <a class="login" href="">Iniciar sesion</a>
-    <a class="login" href="">Registrarse</a>
+    <a class="login" href="../pages/login.php">Iniciar sesion</a>
+    <a class="login" href="../pages/registrarse.php">Registrarse</a>
   </div>
 </main>
   

@@ -1,12 +1,59 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "padelworld";
-
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
+error_reporting(0);
+include '../pages/conecta.php';
+//consulta para insertar datos 
 
 
+if(isset($_POST['registro'])){
+  $mensaje="";
+  $nombre=$conecta->real_escape_string($_POST['nombre']);
+  $apellido=$conecta->real_escape_string( $_POST['apellido']);
+  $correo=$conecta->real_escape_string( $_POST['correo']);
+  $telefono=$conecta->real_escape_string( $_POST['telefono']);
+  $password=$conecta->real_escape_string( $_POST['password']);
+  $verificar_password = $_POST['verificar_password'];
+  //verificar ambas password
+  if($password !=$verificar_password){
+    $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+  <strong>Las contraseñas no son iguales.</strong> 
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+  </div>";
+
+  } else{
+    
+   //consultar que el registro no exista
+
+  $validar="SELECT * FROM usuarios where correo= '$correo'";
+  $validando= $conecta->query($validar);
+  if($validando->num_rows >0){
+    $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+  <strong>El email ya se encuentra registrado</strong> 
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+  </div>";
+
+  } else {
+
+//consulta para insertar los datos
+$insertarDatos = "INSERT INTO usuarios VALUES ('','$nombre', '$apellido','$correo','$telefono', '$password')";
+$guardando= $conecta->query($insertarDatos);
+if($guardando >0){
+
+$mensaje.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
+<strong>Tu registro se realizo con exito</strong> 
+<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>";
+
+  } 
+else {
+  $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+  <strong>Tu registro no se realizo con exito</strong> 
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+  </div>";
+
+}
+}
+}
+}
 ?>
 
 <!DOCTYPE html>
@@ -123,7 +170,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
   
           <div class="bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form action="#" name="padelworld" method="post">
+              <form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="padelworld" method="post">
 
                   <!-- NOMBRE input -->
                   <div class="form-outline mb-3">
@@ -163,7 +210,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
                  <!-- Password input -->
                  <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example4">REPETIR CONTRASEÑA</label>
-                  <input type="password" id="form3Example4" class="form-control" placeholder="Maximo 8 caracteres" />                  
+                  <input type="password" name="verificar_password" id="form3Example4" class="form-control" placeholder="Maximo 8 caracteres" />                  
                 </div>
   
                 <!-- Checkbox -->
@@ -176,6 +223,7 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
   
                 <!-- Submit button -->
                 <input type="submit" name="registro" class="btn btn-primary btn-block mb-4">
+                <?php echo $mensaje; ?>
                  
             
                 <p>
@@ -231,24 +279,5 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos)
   </body>
 
 
-  <?php
-
-  if(isset($_POST['registro'])){
-  $nombre= $_POST['nombre'];
-  $apellido= $_POST['apellido'];
-  $correo= $_POST['correo'];
-  $telefono= $_POST['telefono'];
-  $password= $_POST['password'];
- 
-
- 
- 
-      
-
-$insertarDatos = "INSERT INTO usuarios VALUES ('','$nombre', '$apellido','$correo','$telefono', '$password')";
-
-$ejecutarInsertar= mysqli_query($enlace, $insertarDatos);
-}
-?>
-
+  
 </html>
