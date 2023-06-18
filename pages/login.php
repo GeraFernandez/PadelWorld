@@ -1,3 +1,51 @@
+<?php
+session_start();
+error_reporting(0);
+//solicitar la conexion a la base de datos
+
+include '../pages/conecta.php';
+
+if(isset($_POST['entrar'])){
+
+$ruser = $conecta->real_escape_string($_POST['correo']);
+$rpassword = $conecta->real_escape_string($_POST['password']);
+//consulta que extrae los datos de la base de datos
+
+$consulta = "SELECT * FROM usuarios where correo = '$ruser' AND password = '$rpassword'";
+
+if($resultado=$conecta->query($consulta)){
+  while($row=$resultado->fetch_array()){
+    $userok=$row['correo'];
+    $passwordok=$row['password'];
+  }
+
+  $resultado->close();
+
+
+}
+$conecta->close();
+
+//si existe usuario y contraseña, se validan
+if(isset($ruser) && isset($rpassword)){
+if($ruser==$userok && $rpassword==$passwordok) {
+  $_SESSION['login']=TRUE;
+  $_SESSION['correo']=$correo;
+  header("Location: ../pages/jugadores.php");
+}
+else{
+  $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>Tus datos no son correctos.</strong> 
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+}
+}
+
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +67,7 @@
     <link rel="stylesheet" href="../styles/estilos.css">
 
     
-    <title>Padel World - </title>
+    <title>Padel World </title>
 </head>
 <body >
 
@@ -110,12 +158,12 @@
            
           <div class="bg-glass"> <!-- "card bg-glass"> -->
             <div class="card-body px-4 py-5 px-md-5">
-              <form action="../pages/jugadores.php" method="post">
+              <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 
   
                 <!-- Email input -->
                 <div class="form-outline mb-">
-                  <input type="email" id="form3Example3" class="form-control" name="email" />
+                  <input type="email" id="form3Example3" class="form-control" name="correo" />
                   <label class="form-label" for="form3Example3">EMAIL</label>
                 </div>
   
@@ -135,10 +183,16 @@
                 </div>
   
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  INICIAR SESION
-              </button>
+
+                <button  type="submit" name="entrar" class="btn btn-primary btn-block mb-4">
+                     INICIAR SESION
+                </button>
+               
+                <?php echo $mensaje; ?>
+                
+
               <p>
+              
                   ¿No tienes cuenta aún? 
                   <a href="../pages/registrarse.php">Regístrate</a>
               </p>
@@ -191,20 +245,4 @@
   </body>
 
 
-  <?php 
-require_once('config.php');
-$email = $_POST['email'];
-$password = $_POST['password'];
-
-$query = "SELECT * FROM usuarios where correo = '$email' AND password = '$password'";
-$result = $enlace->query($query);
-
-if($result->num_rows > 0){
-  
-  header("Location: /pages/jugadores.php");
-}
-else{
-  header("Location: /pages/registrarse.php");
-}
-?>
   </html>
