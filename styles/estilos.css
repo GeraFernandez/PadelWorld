@@ -453,6 +453,7 @@ body{
 
 /* menu juagadores- titulos */
 #menu-jugadores{
+
   max-width: 1150px;
   margin:  20px auto 100px auto;
   display:grid;
@@ -494,7 +495,7 @@ background-color: rgba(220,220,220,255);
 #menu-jugadores .contenido {
   background-color: whitesmoke;
   border-radius: 15px;
-  height: 200px;
+  height: 1000px; /* calendario php */
   margin: 10px;
   padding: 10px;
   display: flex;
@@ -1582,14 +1583,12 @@ body {
 
 
 
+/* calendario php */
 
-/* warnings js */
-.warnings{
-  width: 200px;
-  text-align: center;
-  margin: auto;
-  color: red;
-  padding-top: 20px;
+
+#misreservas .calendario{
+  background-color: red;
+  height: 1000px;
 }
 
 

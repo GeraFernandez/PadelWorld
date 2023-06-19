@@ -215,93 +215,30 @@ $row =$ejecuta->fetch_assoc();
   
 
 
-<!-- tarjetas jugadores -->
-<div class="container JUGADOR">
-  <div class="row ">
-    <div class="col-md-3 ">
-      <div class="card  ">
-        <img src="/img/fondo-padel3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Título de la tarjeta</h5>
-          <p class="card-text">Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir a algún lugar</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="/img/fondo-padel2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Título de la tarjeta</h5>
-          <p class="card-text">Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir a algún lugar</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="/img/pxfuel.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Título de la tarjeta</h5>
-          <p class="card-text">Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-          <a href="#" class="btn btn-primary">Ir a algún lugar</a>
-        </div>
-      </div>
-    </div>
- 
-      <div class="col-md-3 ">
-        <div class="card  ">
-          <img src="/img/fondo-padel3.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Título de la tarjeta</h5>
-            <p class="card-text">Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
-            <a href="#" class="btn btn-primary">Ir a algún lugar</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 <!-- menu jugodores -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-12">
-      <div class="list-group" id="menu">
-        <a href="#" class="list-group-item list-group-item-action active">Mis reservas</a>
-        <a href="#" class="list-group-item list-group-item-action">Mis torneos</a>
-        <a href="#" class="list-group-item list-group-item-action">Mis clases</a>
-        <a href="#" class="list-group-item list-group-item-action">Historial</a>
-        <a href="#" class="list-group-item list-group-item-action">Amigos</a>
-        <a href="#" class="list-group-item list-group-item-action">Metodos de pago</a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-md-12 bg-white">
-      <div id="opcion1" class="d-none">
-       Mis reservas
-      </div>
-      <div id="opcion2" class="d-none">
-       Mis torneos
-      </div>
-      <div id="opcion3" class="d-none">
-        Mis clases
-      </div>
-      <div id="opcion4" class="d-none">
-       Historial
-      </div>
-      <div id="opcion5" class="d-none">
-        Metodos de pago
-      </div>
-      <div id="opcion6" class="d-none">
-        Metodos de pago
-      </div>
-    </div>
-  </div>
-</div>
+<section id="menu-jugadores">
+  <div class="titulos">
+        <a class="item" href="#misreservas" onclick="seleccionar(this)">MIS RESERVAS</a>
+        <a class="item" href="#mistorneos" onclick="seleccionar(this)">MIS TORNEOS</a>
+        <a class="item" href="#misclases" onclick="seleccionar(this)">MIS CLASES</a>
+        <a class="item" href="#amigos" onclick="seleccionar(this)">AMIGOS</a>
+        <a class="item" href="#pagos" onclick="seleccionar(this)">METODOS DE PAGO</a>
+      
+ </div>
 
+    <div class="contenido">
+  
+  <section id="misreservas">
+    <h3 class="title" >MIS RESERVAS</h3>
+   <div class="calendario">aca va el calendario php si queres despues lo haga mas alto, no se bien como queres hacerlo. decime si hace falta porque hay que modificar otras cosas tambien
+    <!-- ACA VA EL CALENDARIO PARA PHP -->
+   </div>
+  </section>
 
-
+</section>
 
 
 
