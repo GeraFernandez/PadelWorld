@@ -42,18 +42,14 @@ $row = $ejecuta->fetch_assoc();
     <script src="../js/moment.min.js"> </script>
 
 
-
-
-    <!-- Full calendar -->
-    <link rel="stylesheet" href="../styles/fullcalendar.min.css">
-    <script src="../js/fullcalendar.min.js"> </script>
-    <script src="../js/es.js"> </script>
-
     <link rel="stylesheet" href="../styles/estilos.css">
     <!-- bootsrap para full calendar (debe ir abajo del js) -->
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+
 
 
 
@@ -65,13 +61,7 @@ $row = $ejecuta->fetch_assoc();
 
 </head>
 
-<body>
 
-</body>
-
-</html>
-
-</head>
 
 <body class="body-jugadores">
 
@@ -269,185 +259,128 @@ $row = $ejecuta->fetch_assoc();
                 <a class="item" href="#pagos" onclick="seleccionar(this)">METODOS DE PAGO</a>
 
             </div>
+
+
+            <div class="contenido">
+
+                <section id="misreservas">
+                    <h3 class="title">MIS RESERVAS</h3>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-7">
+                            <div id="CalendarioWeb">
+
+                                <script>
+                                $(document).ready(function() {
+                                    var calendar = $('#calendar').fullCalendar({
+                                        editable: true,
+                                        header: {
+                                            left: 'prev,next today',
+                                            center: 'title',
+                                            right: 'month,agendaWeek,agendaDay'
+                                        },
+                                        events: 'load.php',
+                                        selectable: true,
+                                        selectHelper: true,
+                                        select: function(start, end, allDay) {
+                                            var title = prompt("Enter Event Title");
+                                            if (title) {
+                                                var start = $.fullCalendar.formatDate(start,
+                                                    "Y-MM-DD HH:mm:ss");
+                                                var end = $.fullCalendar.formatDate(end,
+                                                    "Y-MM-DD HH:mm:ss");
+                                                $.ajax({
+                                                    url: "insert.php",
+                                                    type: "POST",
+                                                    data: {
+                                                        title: title,
+                                                        start: start,
+                                                        end: end
+                                                    },
+                                                    success: function() {
+                                                        calendar.fullCalendar(
+                                                            'refetchEvents');
+                                                        alert("Added Successfully");
+                                                    }
+                                                })
+                                            }
+                                        },
+                                        editable: true,
+                                        eventResize: function(event) {
+                                            var start = $.fullCalendar.formatDate(event.start,
+                                                "Y-MM-DD HH:mm:ss");
+                                            var end = $.fullCalendar.formatDate(event.end,
+                                                "Y-MM-DD HH:mm:ss");
+                                            var title = event.title;
+                                            var id = event.id;
+                                            $.ajax({
+                                                url: "update.php",
+                                                type: "POST",
+                                                data: {
+                                                    title: title,
+                                                    start: start,
+                                                    end: end,
+                                                    id: id
+                                                },
+                                                success: function() {
+                                                    calendar.fullCalendar(
+                                                        'refetchEvents');
+                                                    alert('Event Update');
+                                                }
+                                            })
+                                        },
+
+                                        eventDrop: function(event) {
+                                            var start = $.fullCalendar.formatDate(event.start,
+                                                "Y-MM-DD HH:mm:ss");
+                                            var end = $.fullCalendar.formatDate(event.end,
+                                                "Y-MM-DD HH:mm:ss");
+                                            var title = event.title;
+                                            var id = event.id;
+                                            $.ajax({
+                                                url: "update.php",
+                                                type: "POST",
+                                                data: {
+                                                    title: title,
+                                                    start: start,
+                                                    end: end,
+                                                    id: id
+                                                },
+                                                success: function() {
+                                                    calendar.fullCalendar(
+                                                        'refetchEvents');
+                                                    alert("Event Updated");
+                                                }
+                                            });
+                                        },
+
+                                        eventClick: function(event) {
+                                            if (confirm("Are you sure you want to remove it?")) {
+                                                var id = event.id;
+                                                $.ajax({
+                                                    url: "delete.php",
+                                                    type: "POST",
+                                                    data: {
+                                                        id: id
+                                                    },
+                                                    success: function() {
+                                                        calendar.fullCalendar(
+                                                            'refetchEvents');
+                                                        alert("Event Removed");
+                                                    }
+                                                })
+                                            }
+                                        },
+
+                                    });
+                                });
+                                </script>
+                            </div>
+                        </div>
+
+
+                </section>
         </section>
-
-        <div class="contenido">
-
-            <section id="misreservas">
-                <h3 class="title">MIS RESERVAS</h3>
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col-7">
-                        <div id="CalendarioWeb"></div>
-                    </div>
-                    <div class="col"></div>
-                    <script>
-                    $(document).ready(function() {
-                        $('#CalendarioWeb').fullCalendar({
-                            header: {
-                                left: 'today,prev,next',
-                                center: 'title',
-                                right: 'month,agendaWeek,agendaDay'
-                            },
-                            //si quiero un boton con alguna alerta, lo creo 
-                            customButtons: {
-                                Miboton: {
-                                    text: "Boton 1",
-                                    click: function() {
-                                        alert("Accion del boton");
-                                    }
-                                }
-                            },
-                            dayClick: function(date, jsEvent, view) {
-
-                                $('#txtFecha').val(date.format());
-
-                                $("#modalEventos").modal('show');
-
-                            },
-
-                            events: 'http://localhost/padelworld/pages/reservas.php',
-
-                            eventClick: function(calEvent, jsEvent, view) {
-                                //titulo h1
-                                $('#tituloEvento').html(calEvent.title);
-                                // mostrar la informacion del evento en los inputs
-                                $('#txtDescripcion').val(calEvent..);
-                                $('#txtID').val(calEvent.id);
-                                $('#txtTitulo').val(calEvent.title);
-                                $('#txtColor').val(calEvent.color);
-                                
-
-                                //separa la fecha y la hora para guardar
-                                FechaHora = calEvent.start._i.split(" ");
-                                $('#txtFecha').val(FechaHora[0]);
-                                $('#txtHora').val(FechaHora[1]);
-                               
-                                $("#modalEventos").modal('show');
-                            },
-                            editable:true,
-                            eventDrop:function(calEvent){
-                              $('#txtID').val(calEvent.id);
-                              $('#txtTitulo').val(calEvent.title);
-                              $('#txtColor').val(calEvent.color);
-                              $('#txtDescripcion').val(calEvent.descripcion);
-
-                              var FechaHora=calEvent.start.formart().split("T");
-                              $('#txtFecha').val(FechaHora[0]);
-                              $('#txtHora').val(FechaHora[1]);
-
-                              RecolectarDatosGUI();
-                              EnviarInformacion('modificar', NuevoEvento);
-
-
-                            }
-                        });
-                    });
-                    </script>
-            </section>
-
-            <!-- Modal para agregar, modificar y eliminar -->
-
-            <div class="modal fade" id="modalEventos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title" id="tituloEvento"></h1>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            
-                            Id: <input type="text" id="txtID" name="txtID">
-                            Fecha: <input type="text" id="txtFecha" name="txtFecha" /><br />
-                            Titulo: <input type="text" id="txtTitulo"><br />
-                            Hora: <input type="text" id="txtHora" value="10:30" /><br />
-                            Descripcion: <textarea id="txtDescripcion" rows="3"></textarea><br />
-                            Color: <input type="color" value="blue" id="txtColor"><br />
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" id="btnAgregar" class="btn btn-success">Agregar</button>
-                            <button type="button" id="btnModificar" class="btn btn-success">Modificar</button>
-                            <button type="button" id="btnEliminar" class="btn btn-danger">Borrar</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-                    <!-- Script java eventos -->
-
-        <script>
-        var NuevoEvento;
-
-        $('#btnAgregar').click(function() {
-
-            RecolectarDatosGUI();
-            EnviarInformacion('agregar', NuevoEvento);
-        });
-
-        $('#btnEliminar').click(function() {
-
-            RecolectarDatosGUI();
-            EnviarInformacion('eliminar', NuevoEvento);
-        });
-
-        $('#btnModificar').click(function() {
-
-        RecolectarDatosGUI();
-        EnviarInformacion('modificar', NuevoEvento, true);
-        });
-
-
-
-        function RecolectarDatosGUI() {
-            NuevoEvento = {
-                id: $('#txtID').val(),
-                title: $('#txtFecha').val(),
-                start: $('#txtFecha').val() + " " + $('#txtHora').val(),
-                color: $('#txtColor').val(),
-                descripcion: $('#txtDescripcion').val(),
-                textColor: "#FFFFFF",
-                end: $('#txtFecha').val() + " " + $('#txtHora').val()
-            };
-
-        }
-
-        function EnviarInformacion(accion, objEvento, modal) {
-            $.ajax({
-                type: 'POST',
-                url: 'reservas.php?accion?' + accion,
-                data: objEvento,
-                success: function(msg) {
-                    if (msg) {
-                        $('#CalendarioWeb').fullCalendar('refetchEvents');
-                      if(!modal){
-                        $("#modalEventos").modal('toggle');
-
-                      }
-                     
-                    }
-                },
-                error: function() {
-                    alert("Hay un error...");
-
-                }
-
-
-
-            });
-
-        }
-        </script>
-
-
-
-
         <!-- SECCION FOOTER -->
         <footer>
 
