@@ -508,6 +508,39 @@ background-color: rgba(220,220,220,255);
   font-size: 20px;
 }
 
+/* jugadores online */
+.edit{
+  background-color: white;
+  border: none;
+  color: rgb(11, 202, 11);
+  font-size: 30px;
+}
+
+.social-list{
+  margin: 0px 0px 20px 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+
+}
+
+.social-list .bi{
+  margin-right: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------------PAGINA CLUBES------------------------------------- */
 

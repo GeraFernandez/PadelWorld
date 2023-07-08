@@ -538,3 +538,20 @@ form.addEventListener('submit', function(event) {
 function showWarning(message) {
   warnings.innerText = message;
 }
+
+
+
+
+
+
+
+/* modal jugadores online */
+const modal = document.getElementById("mainModal");
+
+const openModal = () => {
+  modal.showModal();
+}
+
+const closeModal = () => {
+  modal.close();
+}
