@@ -106,8 +106,8 @@
 <main id="club-offline">
   <h1 class="title">CLUBES</h1>
   <div class="acceso-login">
-    <a class="login" href="">¿Sos un club?</a>
-    <a class="login" href="">Registrate</a>
+    <a class="login" href="../pages/login.php">¿Sos un club?</a>
+    <a class="login" href="../pages/registrarse.php">Registrate</a>
   </div>
 </main>
   

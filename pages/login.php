@@ -28,6 +28,7 @@ $conecta->close();
 //si existe usuario y contraseña, se validan
 if(isset($ruser) && isset($rpassword)){
 if($ruser==$userok && $rpassword==$passwordok) {
+
   $_SESSION['login']=TRUE;
   $_SESSION['correo']=$correo;
   header("Location: ../pages/jugadores-online.php");
