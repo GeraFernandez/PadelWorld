@@ -109,28 +109,7 @@
       });
     });
 
-    $(document).ready(function() {
-      $("#numCanchas").on("change", function() {
-        var numCanchas = $(this).val();
-        var canchasContainer = $("#canchasContainer");
-        canchasContainer.empty();
-
-        for (var i = 0; i < numCanchas; i++) {
-          var comboboxHtml = `
-            <div class="form-group">
-              <label for="tipoCancha${i}">Tipo de superficie de la cancha ${i + 1}:</label>
-              <select class="form-control" id="tipoCancha${i}" required>
-                <option value="sintetico">Sintético</option>
-                <option value="duro">Duro</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-          `;
-          canchasContainer.append(comboboxHtml);
-        }
-      });
-    });
-
+    
   </script>
 </head>
 <body>
@@ -183,20 +162,7 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
-        <label for="numCanchas">Número de canchas:</label>
-        <select class="form-control" name="numdecancha" id="numCanchas">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-        </select>
-      </div>
+     
       <div class="form-row" id="canchasContainer"></div>
       <button type="submit" class="btn btn-primary">Guardar</button>
       <button type="button" class="btn btn-secondary" id="cancelarBtn">Cancelar</button>
