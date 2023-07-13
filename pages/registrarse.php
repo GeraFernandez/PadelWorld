@@ -6,12 +6,14 @@ include '../pages/conecta.php';
 
 if(isset($_POST['registro'])){
   $mensaje="";
-  $TipoUsuario=$conecta->real_escape_string($_POST['cboTipoUsuario']);
+  
   $correo=$conecta->real_escape_string( $_POST['correo']);
   $password=$conecta->real_escape_string( $_POST['password']);
   $verificar_password = $_POST['verificar_password'];
+  $rol_id=$conecta->real_escape_string($_POST['cboIdRoles']);
   //verificar ambas password
   if($password !=$verificar_password){
+    
     $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
   <strong>Las contraseñas no son iguales.</strong> 
   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
@@ -32,7 +34,7 @@ if(isset($_POST['registro'])){
   } else {
 
 //consulta para insertar los datos
-$insertarDatos = "INSERT INTO usuarios VALUES ('','$TipoUsuario','$correo', '$password')";
+$insertarDatos = "INSERT INTO usuarios VALUES ('','$correo', '$password', '$rol_id')";
 $guardando= $conecta->query($insertarDatos);
 if($guardando >0){
 
@@ -170,15 +172,7 @@ else {
             <div class="card-body px-4 py-5 px-md-5">
               <form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="padelworld" method="post">
 
-                  <!-- NOMBRE input -->
-                  <div class="form-outline mb-3">
-                    <label class="form-label" for="form3Example3">Tipo de Usuario</label>
-                    <select name="cboTipoUsuario">
-                      <option value="Jugador">Jugador</option>
-                      <option value="Club">Club</option>
-                      <option value="Profesor">Profesor</option>
-                    </select>
-                  </div>
+                  
 
                 
                 <!-- Email input -->
@@ -200,6 +194,16 @@ else {
                   <label class="form-label" for="form3Example4">REPETIR CONTRASEÑA</label>
                   <input type="password" name="verificar_password" id="form3Example4" class="form-control" placeholder="Maximo 8 caracteres" />                  
                 </div>
+
+                <!-- NOMBRE input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form3Example3">Tipo de Usuario</label>
+                    <select name="cboIdRoles">
+                      <option value=1>Jugador</option>
+                      <option value=2>Club</option>
+                      <option value=3>Profesor</option>
+                    </select>
+                  </div>
   
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-left mb-4">

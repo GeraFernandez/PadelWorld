@@ -1,4 +1,6 @@
 <?php 
+
+
 $servidor = "localhost";
 $usuario = "root";
 $clave = "";
@@ -10,5 +12,6 @@ if($conecta->connect_errno){
   die("Falló la conexión a la base de datos " . $conecta->connect_error);
   
 }
+
 
 ?>
