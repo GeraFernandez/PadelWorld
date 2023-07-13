@@ -9,6 +9,7 @@ if(isset($_POST['entrar'])){
 
 $ruser = $conecta->real_escape_string($_POST['correo']);
 $rpassword = $conecta->real_escape_string($_POST['password']);
+$TipoUsuario = $conecta->real_escape_string($_POST['TipoUsuario']);
 //consulta que extrae los datos de la base de datos
 
 $consulta = "SELECT * FROM usuarios where correo = '$ruser' AND password = '$rpassword'";
@@ -17,6 +18,7 @@ if($resultado=$conecta->query($consulta)){
   while($row=$resultado->fetch_array()){
     $userok=$row['correo'];
     $passwordok=$row['password'];
+    $TipoUsuario=$row['TipoUsuario'];
   }
 
   $resultado->close();
@@ -31,13 +33,22 @@ if($ruser==$userok && $rpassword==$passwordok) {
 
   $_SESSION['login']=TRUE;
   $_SESSION['correo']=$correo;
+  if($$TipoUsuario=='Jugador') {
   header("Location: ../pages/jugadores-online.php");
+}
+if($$TipoUsuario=='Club') {
+  header("Location: ../pages/clubes-online.php");
+}
+
+if($$TipoUsuario=='Profesor') {
+  header("Location: ../pages/profesores.php");
 }
 else{
   $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Tus datos no son correctos.</strong> 
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>";
+}
 }
 }
 
@@ -159,6 +170,13 @@ else{
            
           <div class="bg-glass"> <!-- "card bg-glass"> -->
             <div class="card-body px-4 py-5 px-md-5">
+
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+            <div class="form-outline mb-">
+                  <input  id="form3Example3" class="form-control" name="TipoUsuario" />
+                  <label class="form-label" for="form3Example3">Tipo de usuario</label>
+                </div>
+            </form>
               <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 
   

@@ -6,10 +6,8 @@ include '../pages/conecta.php';
 
 if(isset($_POST['registro'])){
   $mensaje="";
-  $nombre=$conecta->real_escape_string($_POST['nombre']);
-  $apellido=$conecta->real_escape_string( $_POST['apellido']);
+  $TipoUsuario=$conecta->real_escape_string($_POST['cboTipoUsuario']);
   $correo=$conecta->real_escape_string( $_POST['correo']);
-  $telefono=$conecta->real_escape_string( $_POST['telefono']);
   $password=$conecta->real_escape_string( $_POST['password']);
   $verificar_password = $_POST['verificar_password'];
   //verificar ambas password
@@ -34,7 +32,7 @@ if(isset($_POST['registro'])){
   } else {
 
 //consulta para insertar los datos
-$insertarDatos = "INSERT INTO usuarios VALUES ('','$nombre', '$apellido','$correo','$telefono', '$password')";
+$insertarDatos = "INSERT INTO usuarios VALUES ('','$TipoUsuario','$correo', '$password')";
 $guardando= $conecta->query($insertarDatos);
 if($guardando >0){
 
@@ -174,16 +172,13 @@ else {
 
                   <!-- NOMBRE input -->
                   <div class="form-outline mb-3">
-                    <label class="form-label" for="form3Example3">NOMBRE</label>
-                    <input type="text" name="nombre" id="form3Example3" class="form-control" />
+                    <label class="form-label" for="form3Example3">Tipo de Usuario</label>
+                    <select name="cboTipoUsuario">
+                      <option value="Jugador">Jugador</option>
+                      <option value="Club">Club</option>
+                      <option value="Profesor">Profesor</option>
+                    </select>
                   </div>
-
-                    <!-- APELLIDO input -->
-                <div class="form-outline mb-3">
-                  <label class="form-label" for="form3Example3">APELLIDO</label>
-                  <input type="text" name="apellido" id="form3Example3" class="form-control" />
-                 
-                </div>
 
                 
                 <!-- Email input -->
@@ -193,13 +188,6 @@ else {
                 
                 </div>
 
-               <!-- Telefono input -->
-                <div class="form-outline mb-3">
-                  <label class="form-label" for="form3Example3">Telefono</label>
-                  <input type="text"  name="telefono" id="form3Example3" class="form-control"/>
-                
-                </div>
-  
   
                 <!-- Password input -->
                 <div class="form-outline mb-3">
