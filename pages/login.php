@@ -3,48 +3,58 @@ session_start();
 error_reporting(0);
 //solicitar la conexion a la base de datos
 
-include '../pages/conecta.php';
+include '../modelo/conexion.php';
 
+
+$mensaje="";
 if(isset($_POST['entrar'])){
 
-$ruser = $conecta->real_escape_string($_POST['correo']);
-$rpassword = $conecta->real_escape_string($_POST['password']);
-//consulta que extrae los datos de la base de datos
 
-$consulta = "SELECT * FROM usuarios where correo = '$ruser' AND password = '$rpassword'";
+if(isset($_SESSION['rol_id'])){
+  
+}
 
-if($resultado=$conecta->query($consulta)){
-  while($row=$resultado->fetch_array()){
-    $userok=$row['correo'];
-    $passwordok=$row['password'];
+if(isset($_POST['correo']) && isset($_POST['password'])){
+  $userok= $_POST['correo'];
+  $passwordok=$_POST['password'];
+
+  $db = new Database();
+  $query= $db->connect()->prepare('SELECT * FROM usuarios where correo = :correo AND password = :password');
+  $query->execute(['correo'=> $userok, 'password'=> $passwordok ] );
+  $row = $query ->fetch(PDO::FETCH_NUM);
+  if($row == true){
+    $rol_id = $row[3];
+    $_SESSION['rol_id'] = $rol_id;
+    switch($_SESSION['rol_id']) {
+      case 1:
+        header('Location: ../pages/jugadores-online.php');
+        break;
+        case 2:
+          header('Location: ../pages/clubes-online.php');
+          break;
+          case 3:
+            header('Location: ../pages/profesores.php');
+            break;
+        default:
+        $mensaje .= "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <strong>Tus datos no son correctos.</strong> 
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                  </div>";
+                }
+} else {
+
+  $mensaje .= "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                  <strong>Tus datos no son correctos.</strong> 
+                  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>";
+
+
+
   }
-
-  $resultado->close();
-
-
-}
-$conecta->close();
-
-//si existe usuario y contraseña, se validan
-if(isset($ruser) && isset($rpassword)){
-if($ruser==$userok && $rpassword==$passwordok) {
-
-  $_SESSION['login']=TRUE;
-  $_SESSION['correo']=$correo;
-  header("Location: ../pages/jugadores-online.php");
-}
-else{
-  $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-            <strong>Tus datos no son correctos.</strong> 
-            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-            </div>";
-}
-}
-
-}
+  }
+} 
 
 ?>
-
 
 
 <!DOCTYPE html>
@@ -159,6 +169,8 @@ else{
            
           <div class="bg-glass"> <!-- "card bg-glass"> -->
             <div class="card-body px-4 py-5 px-md-5">
+
+
               <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 
   

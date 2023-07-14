@@ -1,16 +1,39 @@
+
+
 <?php
 
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "padelworld";
+class Database{
 
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+    private $host;
+    private $db;
+    private $user;
+    private $password;
+    private $charset;
 
-if ($enlance->connect_errno) {
-    die("Conexion fallida" .  $enlace->connect_errno);
-} else {
-    echo "conectado";
+    public function __construct(){
+        $this->host = 'localhost';
+        $this->db = 'padelworld';
+        $this->user = 'root';
+        $this->password = '';
+        $this->charset = 'utf8mb4';
+    }
+
+    function connect(){
+        try{
+            $connection = "mysql:host=" . $this->host . ";dbname=" . $this->db . ";charset=" . $this->charset;
+            $options = [
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_EMULATE_PREPARES   => false,
+            ];
+            
+            $pdo = new PDO($connection, $this->user, $this->password, $options);
+    
+            return $pdo;
+        }catch(PDOException $e){
+            print_r('Error connection: ' . $e->getMessage());
+        }
+    }
+
 }
 
-?> 
+?>

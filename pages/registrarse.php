@@ -6,14 +6,14 @@ include '../pages/conecta.php';
 
 if(isset($_POST['registro'])){
   $mensaje="";
-  $nombre=$conecta->real_escape_string($_POST['nombre']);
-  $apellido=$conecta->real_escape_string( $_POST['apellido']);
+  
   $correo=$conecta->real_escape_string( $_POST['correo']);
-  $telefono=$conecta->real_escape_string( $_POST['telefono']);
   $password=$conecta->real_escape_string( $_POST['password']);
   $verificar_password = $_POST['verificar_password'];
+  $rol_id=$conecta->real_escape_string($_POST['cboIdRoles']);
   //verificar ambas password
   if($password !=$verificar_password){
+    
     $mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
   <strong>Las contraseñas no son iguales.</strong> 
   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
@@ -34,7 +34,7 @@ if(isset($_POST['registro'])){
   } else {
 
 //consulta para insertar los datos
-$insertarDatos = "INSERT INTO usuarios VALUES ('','$nombre', '$apellido','$correo','$telefono', '$password')";
+$insertarDatos = "INSERT INTO usuarios VALUES ('','$correo', '$password', '$rol_id')";
 $guardando= $conecta->query($insertarDatos);
 if($guardando >0){
 
@@ -172,18 +172,7 @@ else {
             <div class="card-body px-4 py-5 px-md-5">
               <form action="<?php echo $_SERVER['PHP_SELF']; ?>" name="padelworld" method="post">
 
-                  <!-- NOMBRE input -->
-                  <div class="form-outline mb-3">
-                    <label class="form-label" for="form3Example3">NOMBRE</label>
-                    <input type="text" name="nombre" id="form3Example3" class="form-control" />
-                  </div>
-
-                    <!-- APELLIDO input -->
-                <div class="form-outline mb-3">
-                  <label class="form-label" for="form3Example3">APELLIDO</label>
-                  <input type="text" name="apellido" id="form3Example3" class="form-control" />
-                 
-                </div>
+                  
 
                 
                 <!-- Email input -->
@@ -193,13 +182,6 @@ else {
                 
                 </div>
 
-               <!-- Telefono input -->
-                <div class="form-outline mb-3">
-                  <label class="form-label" for="form3Example3">Telefono</label>
-                  <input type="text"  name="telefono" id="form3Example3" class="form-control"/>
-                
-                </div>
-  
   
                 <!-- Password input -->
                 <div class="form-outline mb-3">
@@ -212,6 +194,16 @@ else {
                   <label class="form-label" for="form3Example4">REPETIR CONTRASEÑA</label>
                   <input type="password" name="verificar_password" id="form3Example4" class="form-control" placeholder="Maximo 8 caracteres" />                  
                 </div>
+
+                <!-- NOMBRE input -->
+                <div class="form-outline mb-3">
+                    <label class="form-label" for="form3Example3">Tipo de Usuario</label>
+                    <select name="cboIdRoles">
+                      <option value=1>Jugador</option>
+                      <option value=2>Club</option>
+                      <option value=3>Profesor</option>
+                    </select>
+                  </div>
   
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-left mb-4">
