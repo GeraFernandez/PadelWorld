@@ -1,17 +1,14 @@
 <?php
-function regresarConexion(){
-
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "padelworld";
-
-$conexion = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos) or die ("Conexion fallida");
-mysqli_set_charset($conexion, 'utf8');
-return $conexion;
 
 
+/* Creando una nueva conexión a la base de datos. */
+$con = mysqli_connect("localhost", "root", "", "padelworld");
+
+
+/* Comprobando si hay un error de conexión. */
+if (!$con) {
+    die('Error de conexion '.mysqli_connect_error());
 }
 
+?>
 
-?> 

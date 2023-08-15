@@ -177,8 +177,7 @@ $row = $ejecuta->fetch_assoc();
                     </div>
                     <div class="text-center mt-1">
                         <span class="bg-secondary p-1 px-4 rounded text-white">Level 6</span>
-                        <h2 class="mt-2 mb-0">Nombre usuario <a href="../pages/jugador-reg.html"><button class="edit" > <i class="bi bi-pencil-square"></i></button></a></h2>
-                        
+                       
                         
                      
 
@@ -197,9 +196,10 @@ $row = $ejecuta->fetch_assoc();
                         </ul>
 
                         <div class="buttons">
-
-                            <button class="btn btn-outline-primary px-4">Mensaje</button>
-                            <button class="btn btn-primary px-4 ms-3">Contacto</button>
+                            <h2 class="mt-2 mb-0">Nombre usuario </h2>
+                            <a href="/HTML/jugador-reg.html"> <button class="btn btn-outline-success px-4">Editar <i class="bi bi-pencil-square"></i></button></a>
+                        
+                          
                         </div>
                     </div>
                 </div>

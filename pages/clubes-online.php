@@ -44,30 +44,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><!-- modif agregar links a paginas -->
-            <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/jugadores.php">Jugadores</a>
+            <a class="nav-link" href="../pages/jugadores.html">Jugadores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../pages/clubes.php">Clubes</a>
+          <a class="nav-link" href="../pages/clubes.html">Clubes</a>
         </li>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pages/profesores.php">Profesores</a>
+            <a class="nav-link" href="../pages/profesores.html">Profesores</a>
           </li>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../pages/torneos.php">Torneos</a>
+          <a class="nav-link" href="../pages/torneos.html">Torneos</a>
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Otros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../pages/novedades.php">Novedades</a></li>
-              <li><a class="dropdown-item" href="../pages/sobre-nosotros.php">Sobre nosotros</a></li>
+              <li><a class="dropdown-item" href="../pages/novedades.html">Novedades</a></li>
+              <li><a class="dropdown-item" href="../pages/sobre-nosotros.html">Sobre nosotros</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Contacto</a></li>
             </ul>
@@ -112,11 +112,11 @@
                     <span class="bg-secondary p-1 px-4 rounded text-white">MI CLUB</span>
                  
                     
-                    <h2 class="mt-2 mb-0">Nombre del club <a href="../pages/club-reg.php"><button class="edit" > <i class="bi bi-pencil-square"></i></button></a></h2>
+                    <h2 class="mt-2 mb-0">Nombre del club </h2>
 
                     <h6 class="mt-2 mb-0">Cordoba, Argentina</h6>                 
                     <div class="px-3 mt-2">
-                        <p class="fonts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam suscipit, unde accusantium natus praesentium similique corrupti eligendi error quaerat, quia necessitatibus! Magnam, quia ad sequi nulla doloremque nihil animi debitis expedita. Quis minus rerum harum in quisquam enim cum..</p>
+                          
                     
                     </div>
                     
@@ -129,14 +129,16 @@
                     
                     <div class="buttons">
                         
-                        <button class="btn btn-outline-primary px-4">Mensaje</button>
-                        <button class="btn btn-primary px-4 ms-3">Contacto</button>
+                      <a href="../pages/club-reg.php"> <button class="btn btn-outline-success px-4">Editar <i class="bi bi-pencil-square"></i></button></a>
                     </div>            
                 </div>           
             </div>      
         </div>       
     </div> 
 
+    <div class="container">
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi obcaecati quidem tempore ad saepe cum optio, at aut, inventore ipsam assumenda eveniet placeat praesentium. Doloremque id blanditiis magni assumenda? Expedita?</h2>
+    </div>
 
 
 <!-- tarjetas jugadores -->
@@ -191,7 +193,7 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra de forma predeterminada, hasta que el complemento de colapso agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra de forma predeterminada, hasta que el complemento de colapso agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como la visualización y ocultación a través de transiciones CSS. Puedes modificar cualquiera de esto con CSS personalizado o sobrescribir nuestras variables predeterminadas. También vale la pena señalar que casi cualquier php puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
       </div>
     </div>
   </div>
