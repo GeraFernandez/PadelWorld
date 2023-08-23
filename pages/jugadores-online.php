@@ -171,21 +171,20 @@ $row = $ejecuta->fetch_assoc();
 
             <div class="col-md-12">
                 <div class="card py-5">
+                    
                     <div class="text-center">
                         <img src="../img/logo-dibujo.png" width="100" class="rounded-circle">
                     </div>
                     <div class="text-center mt-1">
                         <span class="bg-secondary p-1 px-4 rounded text-white">Level 6</span>
-                        <h2 class="mt-2 mb-0">kcksdk</h2>
+                       
+                        
+                     
+
+
                         <h6 class="mt-2 mb-0">Cordoba, Argentina</h6>
                         <div class="px-3 mt-2">
-                            <p class="fonts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam
-                                suscipit, unde
-                                accusantium natus praesentium similique corrupti eligendi error quaerat, quia
-                                necessitatibus! Magnam,
-                                quia ad sequi nulla doloremque nihil animi debitis expedita. Quis minus rerum harum in
-                                quisquam enim
-                                cum..</p>
+                            <p class="fonts"> </p>
 
                         </div>
 
@@ -197,9 +196,10 @@ $row = $ejecuta->fetch_assoc();
                         </ul>
 
                         <div class="buttons">
-
-                            <button class="btn btn-outline-primary px-4">Mensaje</button>
-                            <button class="btn btn-primary px-4 ms-3">Contacto</button>
+                            <h2 class="mt-2 mb-0">Nombre usuario </h2>
+                            <a href="/HTML/jugador-reg.html"> <button class="btn btn-outline-success px-4">Editar <i class="bi bi-pencil-square"></i></button></a>
+                        
+                          
                         </div>
                     </div>
                 </div>
@@ -389,8 +389,8 @@ $row = $ejecuta->fetch_assoc();
 
         </div>
                     <!-- Script java eventos -->
-
-        <script>
+        <script src="/js/scrips.js"></script>
+        <!-- <script>
         var NuevoEvento;
 
         $('#btnAgregar').click(function() {
@@ -451,7 +451,7 @@ $row = $ejecuta->fetch_assoc();
             });
 
         }
-        </script>
+        </script> -->
 
 
 </section>
