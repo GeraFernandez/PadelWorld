@@ -465,7 +465,7 @@ body{
 #menu-jugadores .titulos{
 
 border-radius: 15px;
-height: 200px;
+height: 100px;
 margin: 10px;
 padding: 10px;
 display: flex;
@@ -495,7 +495,7 @@ background-color: rgba(220,220,220,255);
 #menu-jugadores .contenido {
   background-color: whitesmoke;
   border-radius: 15px;
-  height: 1000px; /* calendario php */
+  height: 300px; /* calendario php */
   margin: 10px;
   padding: 10px;
   display: flex;
@@ -989,6 +989,7 @@ text-align: center;
 }
 
 #nosotros-info .fila {
+
 display: flex;
 justify-content: center;
 max-width: 1200px;
